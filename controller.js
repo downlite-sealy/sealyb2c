@@ -2623,7 +2623,7 @@ $tmp.empty().remove();
 //					app.u.dump(' -> r = '+r);
 					sr = r.split('.');
 					o = sr[0];
-					if(sr[1])	{o += '<span class="cents">.'+sr[1]+'<\/span>'}
+					if(sr[1])	{o += '.<span class="cents">'+sr[1]+'<\/span>'}
 					$tag.html(o);
 					}
 				else	{

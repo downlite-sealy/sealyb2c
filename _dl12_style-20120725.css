@@ -629,14 +629,166 @@ a.highlight	{color:#d2590a;}
 
 h1	{color:#665d51; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:0;}
 
+/*My CSS*/
+body{ background:url(images/bg.gif); margin:0px; padding:0px; font-family: 'Montserrat', sans-serif;font-size:13px; font-weight:normal;}
+a{ text-decoration:none; color:#128ec7;}
+a:hover{ text-decoration: underline; color:#128ec7;}
+.cb{ clear:both;}
+img{ border:0;}
+#wrapper{ width:100%;margin:0px auto; padding:0px;}
+header{width:940px;margin:0px auto; padding:0px;}
+.topbar{ box-shadow:2px 0 10px #999999; height:48px;}
+.welcome{ width:940px; margin:0px auto; padding:15px 0 0 0;}
+.fl{ float:left;}
+.fr{ float:right;}
+.logoSec{ margin:61px 0 0 80px;}
+.logo{ width:94px; float:left; margin-right:296px;}
+.searchbar{ width:470px; float:left; font-size:12px;}
+.searchbar a{ text-decoration:underline;}
+.Smain{ padding:10px 0 0 0;}
+.number{ margin:0 0 0 34px;}
+.number b{ font-weight:400;}
+.Searchbg{ background:#f5f5f5; padding:10px 7px 7px 10px; width:300px; float:left;}
+.Searchbg input{ width:206px; height:30px; border:0px;color:#000; padding:0 10px;font-family: 'Montserrat', sans-serif; font-size:12px;}
+.Searchbg img{ margin:0 0 -10px;}
+.learnmore{ background:#c1dfec; width:129px; float:left; font-size:10px; padding:3px 0 4px 21px;}
+.learnmore b{ font-size:13px; color:#1891c8; font-weight:400;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {.learnmore b {font-size:11px;}}
+.Logos{margin:61px 0 0 0;display: block;position: relative; }
+.Logos:after {
+    content: "";
+    background:#fefefe; 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter: alpha(opacity=50);
+	-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+.Logos div{ width:940px; margin:0px auto;}
+#companyNav{ width:auto;}
+nav{ width:940px; margin:0px auto; padding:0px;}
+nav a{ font-size:18px; color:#000000; margin:0;}
+nav a:hover{ color:#007dc0; text-decoration:none;}
+
+.wrapper{ margin:0px auto; width:100%; padding:0px;display: block; padding:40px 0 0 0;position: relative;}
+.wrapper:after {
+    content: "";
+    background:#fefefe; 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70);
+	-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.SlideMain{ width:940px; margin:0px auto; padding:38px 0 29px 0;}
+.Slide{ width:620px; float:left; margin:0 20px 0 0;}
+.slideright{ width:300px; float:left;}
+
+.pagecontent{width:940px; margin:0px auto;}
+.bedtime{ width:300px; float:left; padding:0 20px 0 10px; line-height:20px;font-family:"Open Sans"; font-size:14px;}
+.bedtime b{ font-size:18px; display:block; font-weight:400; margin-bottom:7px;font-family: 'Montserrat', sans-serif;}
+.bedtime span{ padding:0 0 0 37px;}
+.Quite{ width:290px; margin:0 20px 0 0; float:left; font-size:11px;font-family:"Open Sans";}
+.Quite p, .Affrodable p{ margin:10px 0px; padding:10px; display: block;position: relative; min-height:157px;}
+.Quite p:after, .Affrodable p:after{ content: "";
+    background:#fff; 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70);
+	-moz-opacity:0.7;-khtml-opacity: 0.5;opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1}
+.Quite p img, .Affrodable p img{ float:left;}
+.Quite b, .Affrodable b{ margin:0px; font-size:18px; font-family:"Times New Roman", Times, serif;}
+.Quite img, .Affrodable img{ margin:0 20px 0 0px;}
+.Quite a, .Affrodable a{ color:#359fcf; text-decoration:none; font-size:10px;}
+.Quite a:hover, .Affrodable a:hover{ color:#359fcf; text-decoration: underline;}
+.Affrodable{width:300px; float:left;font-size:11px;font-family:"Open Sans";}
+
+.signmain{ width:100%; padding:25px 0; margin:16px 0 0;display: block;position: relative;}
+.signmain:after {
+    content: "";
+    background:#fff; 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70);
+	-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+.signup{ width:940px; margin:0px auto;}
+.deals{ width:166px; float:left; font-size:10px; text-align:right; padding:10px 20px 0 0;}
+.deals b{ font-size:12px; font-weight:400;}
+.name{ width:148px; float:left; background:#f3f3f3; padding:10px;}
+.name input{ width:127px; height:30px; margin:0px; background:#fff; border:0px;padding:0 10px;font-family: 'Montserrat', sans-serif; font-size:12px;}
+.email input{ width:140px; height:30px; float:left; border:0px; padding:0 10px;font-family: 'Montserrat', sans-serif; font-size:12px;}
+.email img{ margin:0 0 -10px -2px;}
+.email{ width:232px; float:left; padding:10px; margin:0 49px 0 10px;background:#f3f3f3;}
+.icons{ width:273px; float:left; padding:10px 0 0 0;}
+.icons img{ margin-right:21px;}
+
+footer{width:100%; 
+	display: block;
+    position: relative;}
+	
+
+footer:after {
+    content: "";
+    background:#f4f3f2; 
+   /* Theoretically for IE 8 & 9 (more valid) */	
+	/* ...but not required as filter works too */
+	/* should come BEFORE filter */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	
+	/* This works in IE 8 & 9 too */
+	/* ... but also 5, 6, 7 */
+	filter: alpha(opacity=50);
+	
+	/* Older than Firefox 0.9 */
+	-moz-opacity:0.5;
+	
+	/* Safari 1.x (pre WebKit!) */
+	-khtml-opacity: 0.5;
+    
+	/* Modern!
+	/* Firefox 0.9+, Safari 2?, Chrome any?
+	/* Opera 9+, IE 9+ */
+	opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+.footerM{ width:940px; margin:0px auto; padding:26px 0 60px 0;}
+.cust{ width:146px; float:left; margin-right:19px;font-family:"Open Sans"; font-size:12px;}
+.faq{ width:134px; float:left; margin-right:25px;font-family:"Open Sans"; font-size:12px;}
+.res{ width:132px; float:left; margin-right:28px;font-family:"Open Sans"; font-size:12px;}
+.links{ width:138px; float:left; margin-right:30px;font-family:"Open Sans"; font-size:12px;}
+.Ques{ width:288px; float:left; text-align:center; font-size:10.5px;font-family:"Open Sans"; font-size:11px;}
+.Ques span{ font-size:16px; color:#1690c8; font-weight:bold; margin:6px 0 5px; display:inline-block;font-family: 'Montserrat', sans-serif;}
+.cust b, .faq b, .res b, .links b, .Ques b{ font-size:12px; font-family: 'Montserrat', sans-serif;font-weight:500;}
+.cust ul, .faq ul, .res ul, .links ul{ font-size:12px; margin:12px 0 0 5px; line-height: 27px; padding:0px; list-style:none;}
+.cust ul li, .faq ul li, .res ul li, .links ul li{ font-size:12px; margin:0px; padding:0px; list-style:none;}
+.cust ul li a, .faq ul li a, .res ul li a, .links ul li a{ font-size:12px; color:#000;}
+.cust ul li a:hover, .faq ul li a:hover, .res ul li a:hover, .links ul li a:hover{ font-size:12px; text-decoration:none; color:#339ece;}
 
 
 
-
-.wrapper{
-	margin:0 auto;
-	width:990px;
-	overflow: hidden;
+#mainContentArea{margin:0 auto;
+	width:940px;
 }
 .header{
 	width:100%;
@@ -756,8 +908,6 @@ h1	{color:#665d51; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:
 	}
 
 .nav_menu{
-	float:left;
-	width:100%;
 }
 .nav_menu ul{
 	display: inline;
@@ -848,13 +998,8 @@ h1	{color:#665d51; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:
 	float:left;
 	*margin:10px 0 0 0;
 }
-.searchBox {
-    float: left;
-    height: 38px;
-    margin: 3px 0 0;
-}
+
 .box {
-    background-image: url("images/boxbg.png");
     border: 1px solid #BFBFBD;
 	border-right-width:0;
     color: #858585;
@@ -1259,12 +1404,12 @@ h1	{color:#665d51; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:
 .homeTextBannerBlock h1	{color:#5d5d44; margin:0; font-size:13px; font-weight:normal; font-family:'PT Sans', arial, sans-serif; letter-spacing:2px;}
 .homeTextBannerBlock p	{margin:0; font-size:12px; line-height:15px;}
 
-.bannerDuoContainer	{margin-bottom:8px;}
-.bannerDuoContainer .stacked	{width:329px;}
+.bannerDuoContainer	{margin-bottom:29px;}
+.bannerDuoContainer .stacked	{width:300px;}
 .bannerDuoContainer .stacked img	{margin-bottom:2px; margin-left:2px;}
 /* banner slideshow */
 
-#slideshowContainer  {position:relative; z-index:10; height:432px; width:661px; overflow:hidden; } /* setting height/width and overflow hidden keeps banners from showing up, then hiding once slideshow() is executed */
+#slideshowContainer  {position:relative; z-index:10; height:301px; width:620px; overflow:hidden; } /* setting height/width and overflow hidden keeps banners from showing up, then hiding once slideshow() is executed */
 #slideshowContainer  ul, .slideshow li	{list-style:none; margin:0; padding:0; display:inline; float:left; } /* the slides */
 
 #slideshowNav { z-index: 50; position: absolute; bottom: 10px; left: 10px; width:100%; text-align:left; }
@@ -1441,8 +1586,23 @@ CATEGORY TEMPLATE
 .textBlock {display:inline;}
 
 .categoryList li	{height:300px;}
-.productList li	{height:370px;}
-.categoryList li, .productList li	{width:230px;  margin:4px; color:#6f7376; font-size:15px;}
+.productList li	{}
+.productList h5, .categoryList h5 {
+    font-size:12px;
+	color:#1690C8;
+}
+.productList h6, .categoryList h6 {
+    font-family: "Open Sans";
+    font-size: 13px;
+    font-weight: normal;
+    text-align: left;
+	width:120px; float:right;
+}
+.pfrom{  display: inline-block;
+    padding: 7px 0;}
+.cents{ vertical-align:super; font-size:12px;}
+.categoryList li, .productList li	{width:200px;  padding:0 10px 0 0px; color:#000; font-size:13px;}
+.price{ font-weight:bold !important; font-size:18px !important;}
 .catDesc .categoryList li {height:auto; width:auto;} 
 .categoryBox, .productBox	{border:1px solid #d2d2d2;} /* separate class for border because 'categoryList' is shared and not all lists need a border. */
 .categoryList .catName, .productList .productInfoPadding	{text-align:center; padding:8px;}

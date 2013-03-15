@@ -49,7 +49,7 @@ var myCreole;
 
 
 var app = {vars:{
-	"release":"20130312134600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20130315034050",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"_clientid":"zmvc",
 	"baseURL":"",
 //	"httpsURL":"https://www-d38934b9ac-crackle-zoovy-net.app-hosted.com/s=www.d38934b9ac.crackle.zoovy.net/",
@@ -70,6 +70,7 @@ if(document.location.protocol != 'file:')	{
 all css includes need to be after the js that changes the base url. 
 css files should be included before any .js file to ensure they are downloaded in parallel
 -->
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="qs_styles.css" />
 <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" />
@@ -108,7 +109,7 @@ console.log(" -> domain: "+document.domain);
 <table>
 <tr>
 	<td>
-	<img src="images/logo-200x64.png" width="200" height="64" alt="" />
+	<img src="images/logo.gif" width="93" height="79" alt="Sealy" title="Sealy">
 	</td>
 	<td>
 	<h3>One moment please.</h3>
@@ -124,13 +125,41 @@ console.log(" -> domain: "+document.domain);
 </table>
 </div>
 
-
+<div id="wrapper">
 
 <div id='appView' class='displayNone'>
+<div class="topbar">
+        <div class="welcome"><span class="fl">Welcome, Guest!(Not you? <a href="#customer?show=myaccount" class='bindByAnchor'>Sign-in</a> or <a href="#.">Create An Account</a>)
+        </span>
+        <span class="fr"><a href="#cart?show=cart" class='bindByAnchor'><span class='cartItemCount'>0</span> item(s)</a> in <a href="#.">Shopping Cart</a> \ <a href="#.">Checkout</a>
+        <a href="#"><img src="images/que.gif" width="28" height="27" style="margin:-1px 0 -11px 51px;" alt=""></a></span></div>
+    </div>
+    <header>
+<div class="logoSec">
+<div class="logo"><a href="#category?navcat=." class='bindByAnchor'><img src="images/logo.gif" width="93" height="79" alt="Sealy" title="Sealy"></a></div>
+<div class="searchbar"> <span class="number">	 <b>1-866-MY-SEALY</b>&nbsp;&nbsp;&nbsp;M-F 10-4  EST &nbsp;&nbsp;&nbsp;<a href="http://messenger.providesupport.com/messenger/1jz93amcu7bu108sbhe3gwkhul.html" target="_blank">Live Chat</a></span><br>
+<div class="Smain">
+    <div class="Searchbg"><div class="searchBox">
+					<form id='headerSearchFrm' name='headerSearchFrm' action='#' class='productSearchForm' method="get">
+						<input type='search' name='KEYWORDS' id='headerKeywords' class="productSearchKeyword handleDefault box" value="Looking for something specify?" />
+						<input id='headerSearchSubmit' type="image" src="images/search.gif" value="" style="width:70px; height:30px; padding:0px;"/>
+					</form>
+				</div>
+              </div>
+    <div class="learnmore">LEARN MORE ABOUT<br><b>FREE SHIPPING</b><br>ON ALL U.S. ORDERS</div>
+</div>
+</div>
+<div class="cb"></div>
+</div>
+</header>
 
-	<div class="wrapper">
+<section class="Logos"><div><img src="images/Slogo.gif" width="59" height="50" style="margin:25px 0 25px 160px;" alt="Sealy" title="Sealy"><img src="images/posture.gif" width="191" height="31" style="margin:35px 135px 35px 146px;" alt="Posturepedic" title="Posturepedic"><img src="images/stearns.gif" width="142" height="56" style="margin:22px 0;" alt="Stearns &amp; Foster" title="Stearns &amp; Foster"></div><div class="cb"></div></section>
 
-		<div class="header clearfix">
+<nav class="nav_menu"><ul id='tier1categories'></ul><!-- DUAL NAV WILL GO HERE --></nav>
+<div class="cb"></div>
+	
+
+		<!--<div class="header clearfix">
 			<div class="header_top">
 				<p>White Goose Down Pillows &amp; White Goose Down Comforters Manufacturer Direct.</p>
 			</div>
@@ -147,13 +176,13 @@ console.log(" -> domain: "+document.domain);
 				<div class="header_contact">
 					<p>Questions? (866) 931-3696</p>
 					<span class="contact_ads">
-						<!-- START SCANALERT CODE  --><!-- REMOVE HTTP FROM SRC -->
+						
 						<a target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=www.downlitebedding.com"><img width="65" height="37" border="0" src="http://images.scanalert.com/meter/www.mcafee.com/55.gif" alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
-						<!-- END SCANALERT CODE -->
+						
 					</span>
 					<div class="need_help">
 						<p>
-							<strong>Need Help?</strong> <a href="#company?show=contact" class='bindByAnchor'>Call Us</a> <!--at 866.931.3696 -->or <a href="http://messenger.providesupport.com/messenger/1jz93amcu7bu108sbhe3gwkhul.html" target="_blank">Click Here</a> for live chat
+							<strong>Need Help?</strong> <a href="#company?show=contact" class='bindByAnchor'>Call Us</a> or <a href="http://messenger.providesupport.com/messenger/1jz93amcu7bu108sbhe3gwkhul.html" target="_blank">Click Here</a> for live chat
 						</p>
 					</div>
 				</div>
@@ -170,14 +199,14 @@ console.log(" -> domain: "+document.domain);
 						<li><a href="#company?show=faq" class='bindByAnchor'>Help</a></li>
 					</ul>
 				</div>
-			</div><!-- /.header_bottom -->
+			</div>
 
 			<div class="vertical_slider">
-				<ul id='brandCategories' class='noPadOrMargin listStyleNone categoryList fluidList'></ul><!-- BRAND LIST WILL GO HERE -->
+				<ul id='brandCategories' class='noPadOrMargin listStyleNone categoryList fluidList'></ul>
 			</div>
 
 			<div class="nav_menu">
-				<ul id='tier1categories'></ul><!-- DUAL NAV WILL GO HERE -->
+				<ul id='tier1categories'></ul>
 			</div>
 			
 			<div class="index">
@@ -193,16 +222,80 @@ console.log(" -> domain: "+document.domain);
 					<span class="hotelFinder pointer" onClick="return showContent('category',{'navcat':'.hotels'});">Hotel Bedding Finder</span>
 				</div>
 			</div>
-		</div><!-- /header -->
+		</div>--><!-- /header -->
 
 		<!-- <div id='breadcrumb'></div> -->
 
 		<div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
-		<div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
+		<div class="wrapper"><div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
 	</div> <!-- wrapper end -->
 
+
 	<div class="footer">
-		<div class="sign_up_form">
+    <section class="signmain">
+    <div class="signup">
+    <form action='#' id='subscribeFrmFooter' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe(this.id); return false">
+    <div class="deals"><b>SIGN UP FOR DEALS</b><br>
+    Get Product Updates & Coupons</div>
+    <div class="name"><input required='required' type='email' value='email address' class='newsSubscribeInput textbox email'  maxlength='50' size='25' name='login' id='subscribeLoginFooter' onFocus="app.ext.myRIA.u.handleFormField(this);"  onBlur="app.ext.myRIA.u.handleFormField(this);" /></div>
+    <div class="email"><input required='required' type='text'  value='full name' class='newsSubscribeInput textbox fullname' maxlength='50' size='25' name='fullname' id='subscribeFullnameFooter' onFocus="app.ext.myRIA.u.handleFormField(this);"  onBlur="app.ext.myRIA.u.handleFormField(this);" />
+      <input type="image" class="submit" value="" src="images/signup.gif" alt="Sign Up" title="Sign Up" style="width:70px; height:30px;padding:0;"/>
+      </form></div>
+    <div class="icons"><a href="http://www.facebook.com/DOWNLITE" target="_blank"><img src="images/fb.gif" width="32" height="32" alt="Facebook" title="Facebook"></a><a href="http://twitter.com/downlite" target="_blank"><img src="images/twitter.gif" width="32" height="32" alt="Twitter" title="Twitter"></a><a href="https://plus.google.com/b/114695199123775476410/" target="_blank"><img src="images/gplus.gif" width="32" height="32" alt="Google Plus" title="Google Plus"></a><a href="http://pinterest.com/downlite/" target="_blank"><img src="images/pinterest.gif" width="32" height="32" alt="Pinterest" title="Pinterest"></a><a href="#"><img src="images/youtube.gif" width="32" height="32" alt="You Tube" title="You Tube"></a></div>
+    <div class="cb"></div>
+    </div>
+</section>
+<footer>
+<div class="footerM">
+<div class="cust"><b>CUSTOMER SERVICE</b>
+<ul>
+<li><a href="#customer?show=ordertracking" class='bindByAnchor'>Order Tracking</a></li>
+<li><a href="#company?show=shipping" class='bindByAnchor'>Shipping Info</a></li>
+<li><a href="#company?show=return" class='bindByAnchor'>Returns & Exchanges</a></li>
+<li><a href="#company?show=contact" class='bindByAnchor'>Contact Us</a></li>
+<li><a href="#company?show=privacy" class='bindByAnchor'>Your Privacy</a></li>
+</ul>
+</div>
+
+<div class="faq"><b>FAQs</b>
+<ul>
+<li><a href="#category?navcat=.600-silk-down-bedding-buying-guide" class='bindByAnchor'>Silk Down Bedding</a></li>
+<li><a href="#category?navcat=.603-down-alternative" class='bindByAnchor'>Alternative Down</a></li>
+<li><a href="#category?navcat=.605-comforter-or-duvet-insert" class='bindByAnchor'>Comforter or Duvet</a></li>
+<li><a href="#category?navcat=.607-feathers-versus-down" class='bindByAnchor'>Feathers or Down</a></li>
+<li><a href="#category?navcat=.609-blanket-versus-comforter" class='bindByAnchor'>Blanket or Comforter</a></li>
+<li><a href="#category?navcat=.611-featherbed-versus-mattress-pad" class='bindByAnchor'>Feather Bed / Mattress</a></li>
+</ul>
+</div>
+<div class="res"><b>RESOURCES</b>
+<ul>
+<li><a href="http://nocjournal.com/" target='_blank'>Sleep Well Blog</a></li>
+<li><a href="http://www.beddingcare.com/" target='_blank'>Bedding Care</a></li>
+<li><a href="http://www.whybuydown.com/index.php" target='_blank'>Why Buy Down</a></li>
+<li><a href="http://www.energyefficientbedding.com/" target='_blank'>Lower Your Energy Bill</a></li>
+<li><a href="http://www.dustmitefacts.org/" target='_blank'>Dust Mite Facts</a></li>
+</ul>
+</div>
+<div class="links"><b>LINKS</b>
+<ul>
+<li><a href="http://downandfeathercouncil.com/" target='_blank'>Hypoallergenic Down</a></li>
+<li><a href="http://www.thefabricofourlives.com/" target='_blank'>Natural Cotton Bedding</a></li>
+<li><a href="#category?navcat=." target='_blank'>Sealy Bedding</a></li>
+<li><a href="#category?navcat=.617-downlite-partners" target='_blank'>Partner Links</a></li>
+<li><a href="#">Become a Retailer</a></li>
+</ul>
+</div>
+<div class="Ques"><b>QUESTIONS OR CONCERNS? CALL US!</b>
+<span>1-866-MY-SEALY</span><br>
+Monday to Friday 10:00Am - 4:00pm EST<br>
+<img src="images/mca.gif" width="62" height="22" style="margin:18px 0 21px;" alt=""> <br>
+Manufactured by DOWNLITE, a licensee of<br>
+Sealy Corporation, 8153 Duke Blvd, Mason Oh 45040.<br>
+<br>
+2013 All rights reserved. E-commerce by <b style="color:#128EC7;">Zoovy</b></div><div class="cb"></div>
+</div>
+</footer>
+		<!--<div class="sign_up_form">
 			<div class="sign_up_form_inner">
 				<div class="social_icon">
 					<a class="icon facebook" href='http://www.facebook.com/DOWNLITE' target='_blank'>&nbsp;</a>
@@ -232,7 +325,7 @@ console.log(" -> domain: "+document.domain);
 						<li><a href="#company?show=return" class='bindByAnchor' >Returns & Exchanges</a></li>
 						<li><a href="#company?show=contact" class='bindByAnchor'>Contact Us</a></li>
 						<li><a href="#company?show=privacy" class='bindByAnchor'>Your Privacy</a></li>
-	<!--						<li><a href="#" >Banner/decal #8 (103 by X)</a></li> -->
+	
 					</ul>
 				</div>
 				<div class="footer_widget">
@@ -290,8 +383,8 @@ console.log(" -> domain: "+document.domain);
 					<p>Copyright &copy; 2012. All rights reserved e-commerce by <font>Zoovy</font></p>
 				</div>
 			</div>
-		</div> <!-- footer_bottom end -->
-	</div> <!-- footer end -->
+		</div> 
+	</div>--> <!-- footer end -->
 
 	<!-- will be populated with a list of subcats from .hotels for use in a modal -->
 	<div id='hotelListContainer' class='displayNone' title='Select a hotel to see what you slept on'>
@@ -302,7 +395,7 @@ console.log(" -> domain: "+document.domain);
 
 		<!-- BEGIN: Google Trusted Store --> <script type="text/javascript"> var gts = gts || []; gts.push(["id", "<b>66091</b>"]); gts.push(["google_base_offer_id", "%PRODUCT%"]); gts.push(["google_base_subaccount_id", "<b>3289549</b>"]); gts.push(["google_base_country", "<b>US</b>"]); gts.push(["google_base_language", "<b>TEN</b>"]); (function() { var scheme = (("https:" == document.location.protocol) ? "https://" : "http://"); var gts = document.createElement("script"); gts.type = "text/javascript"; gts.async = true; gts.src = scheme + "www.googlecommerce.com/trustedstores/gtmp_compiled.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(gts, s); })(); </script> <!-- END: Google Trusted Store -->
 
-		<a class="tf_upfront_badge" href="http://www.thefind.com/store/about-downlitebedding" title="TheFind Upfront"><img  border="0" src="//upfront.thefind.com/images/badges/r/98/1c/981c860f7e8f50efddb2ec51755df37b.png" alt="DownLite Bedding is an Upfront Merchant on TheFind. Click for info."/></a>
+		<!--<a class="tf_upfront_badge" href="http://www.thefind.com/store/about-downlitebedding" title="TheFind Upfront"><img  border="0" src="//upfront.thefind.com/images/badges/r/98/1c/981c860f7e8f50efddb2ec51755df37b.png" alt="DownLite Bedding is an Upfront Merchant on TheFind. Click for info."/></a>-->
 		  <script type="text/javascript">
 			(function() {
 			  var upfront = document.createElement('SCRIPT'); upfront.type = "text/javascript"; upfront.async = true;
@@ -313,8 +406,10 @@ console.log(" -> domain: "+document.domain);
 		</script>
 	</div>
 
+
 </div> <!-- AppView end -->
 
+</div>
 
 
 
@@ -399,8 +494,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 <div id='homepageTemplate' class='homeTemplate'>
 	<div class="bannerDuoContainer clearfix">
 			<div class="floatRight stacked">
-				<a title="Memory Fiber Relief In a Custom Shaped Pillow Design With Cool Touch Panel" onClick="return showContent('product',{'pid':'DOW777PI0340'});" href="#" class="bannerBind"><img alt="Memory Fiber Relief In a Custom Shaped Pillow Design With Cool Touch Panel" src="images/330x215_curved_comfort_suprelle_pillow.jpg" height="215" width="329"></a>
-				<a title="Our Best 50/50 Hotel Down " onClick="return showContent('product',{'pid':'750105088655'});" href="#" class="bannerBind"><img alt="Our Best 50/50 Hotel Down " src="images/homebanners6.jpg" height="215" width="329"></a>
+				<a title="Memory Fiber Relief In a Custom Shaped Pillow Design With Cool Touch Panel" onClick="return showContent('product',{'pid':'DOW777PI0340'});" href="#" class="bannerBind"><img src="images/ourbest.jpg" width="300" height="141" alt=""></a>
+				<a title="Our Best 50/50 Hotel Down " onClick="return showContent('product',{'pid':'750105088655'});" href="#" class="bannerBind"><img src="images/pillow.jpg" width="300" height="141" style="margin-top:15px;" alt=""></a>
 			</div>
 			<div class="floatLeft">
 				<div id="slideshowContainer">
@@ -423,7 +518,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 						</a>
 						<a title="Good Housekeeping PrimaLoft Pillows - Easy Care" onClick="return showContent('product',{'pid':'750105095080'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: block; z-index: 6; opacity: 1; width: 661px; height: 432px;">
-								<img alt="Good Housekeeping PrimaLoft Pillows - Easy Care " src="images/600x400_2013_good_housekeeping_pillow.jpg" height="432" width="661">
+								<img src="images/sterns.jpg" width="620" height="301" alt="">
 							</li>
 						</a>
 						<a title="Best Entry Level Feather Pillow For Only $25 - Made In The USA" onClick="return showContent('product',{'pid':'SDL100PI0170'});" href="#" class="bannerBind">
@@ -456,7 +551,31 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 
 	<div><img src='blank.gif' width='992' height='120' data-bind="var: category(%page.banner_wide1); format: banner; extension:myRIA; editor:banner;" /></div>
 -->
-<div class="floatRight homeTextBannerBlock">
+<section class="pagecontent">
+<div class="bedtime"><b>A Bedtime Classic</b>
+
+	<span>Lorem ipsum dolor sit amet,
+consectetur adipiscing elit. Aliquam porta, leo vel pulvinar facilisis, urna nibh
+tincidunt sapien, sed consectetur tellus diam in leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas est velit,
+ullamcorper vel euismod ac, accumsan sed eros.</span><br><br>
+
+Integer ac neque at arcu luctus<br>
+pellentesque ac ut dui. Morbi est justo, dapibus ut fringilla at, placerat nec elit. Sed enim nisl, vestibulum a tincidunt sed,
+porttitor a lacus.</div>
+<div class="Quite">
+<p><img src="images/pic1.jpg" width="130" height="156" alt=""><b>Q</b>uiet teger ac neque at arcu luctus pellen tesque ac ut dui. Morbi est justo, dapibus ut fringilla at, placerat nec elit. Sed enim nisl, vestibulum a tincidunt sed statis... <br>
+  <a href="#">READ MORE</a></p>
+<div class="cb"></div>
+<p><img src="images/pic2.jpg" width="130" height="156" alt=""><b>H</b>ealthier ac neque at arcu luctus pellen tesque ac ut dui. Morbi est justo, dapibus ut fringilla at, placerat nec elit. Sed enim nisl, vestibulum a tincidunt sed... <br>
+  <a href="#">READ MORE</a></p></div>
+<div class="Affrodable">
+<p><img src="images/pic3.jpg" width="130" height="156" alt=""><b>A</b>ffordable et teger ac neque at arcu luctus pellen tesque ac ut dui. Morbi est justo, dapibus ut fringilla at, placerat nec elit. Sed enim nisllatis initica fringilla... <a href="#"><br>
+  READ MORE</a></p>
+<div class="cb"></div>
+<p><img src="images/pic4.jpg" width="130" height="156" alt=""><b>C</b>omfortable neque at arcu luctus pellen tesque ac ut dui. Morbi est justo, dapibus ut fringilla at, placerat nec elit. Sed enim nisl, vestibum... <a href="#"><br>
+  READ MORE</a></p></div>
+</section><div class="cb"></div>
+<!--<div class="floatRight homeTextBannerBlock">
 	<img alt="Down Bedding - Manufacturer Direct" src="images/150x150_downlite_down_bedding.jpg" height="90" width="90">
 	<div class="textBlock"><h1>Down Bedding</h1><p>Enjoy the luxury of down bedding at home manufacturer direct. Offering hypoallergenic down bedding including limited edition and overstock down bedding choices. Click to learn about down bedding.</p></div>
 </div>
@@ -481,7 +600,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 <div class="textBlock">
 	<p>DOWNLITE is a 100 year old family business based in the United States supplying Luxury Down Bedding for the finest department stores, catalogs, hotels and resorts in the country. DOWNLITE is unique because we do not just make down bedding for stores, we also supply our RestAssured Hypoallergenic down fillings to other manufacturers.</p>
 	<p>Many of our customers find us because they enjoyed sleeping on one of our hotel pillows or hotel comforters at a fine resort or luxury hotel. Some of our hotel bedding has one of our HotelDownShop.com labels attached to the piece of hotel linens.</p>
-</div>
+</div>-->
 <!--
 <div class='floatRight homeTextBannerBlock'>
 	<img src='blank.gif' width='90' height='90' data-bind="var: category(%page.banner_square1); format: banner; extension:myRIA; editor:banner;" />
@@ -729,27 +848,21 @@ container ul should have lineItemProdlist class on it instead of productList
 
 </ul>
 
-
-
-
-
-
-
 <ul>
 <!--
 Used for the product in a product list (prodlist), usually in the body of a category or the homepage.
 the loadingBG class is removed (must be that classname) when the template is translated.
 remember to NOT put the button inside the 'onclick' container or two events will occur onclick.
 -->
-<li id='productListTemplateResults' class='loadingBG  ' >
+<li id='productListTemplateResults' class='loadingBG'>
 	<div onClick="showContent('product',{'pid':$(this).attr('data-pid')})" data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' class='pointer'>
 		<div class='prodThumbContainer'>
-		<img src='blank.gif' class='prodThumb' data-bind='var: product(images); format:imageURL; isElastic:1; bgcolor:ffffff;' width='120' height='120' />
+		<img src='blank.gif' class='prodThumb' data-bind='var: product(images); format:imageURL; isElastic:1; bgcolor:ffffff;' width='220' height='164' style="margin:0 0 16px;"/>
 		</div>
 		
 		<h5 data-bind='var: product(prod_name); format:text;'></h5>
 	
-		<h6 data-bind='var: product(base_price); format:money; isElastic:1; currencySign: $;  hideZero:true; className:price; pretext: Price From: ;'></h6>
+		<h6 data-bind='var: product(base_price); format:money; isElastic:1; currencySign: $;  hideZero:true; className:price; before:<span class="pfrom"> Price From:</span> ;'></h6>
 	</div>
 </li>
 </ul>
