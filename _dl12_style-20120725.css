@@ -974,16 +974,17 @@ footer:after {
 	display:block !important;
 }
 .nav_menu ul li a{
-	color: #605B57;
+	color: #000;
     float: left;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight:normal;
     padding: 21px 12px;
     text-decoration: none;
 }
 .nav_menu ul li:hover a{
 	background:url(images/nav_active.png);
     padding: 21px 11px;
+	color:#007dc0;
 	border-left:1px solid #cfcfcf;
 	border-right:1px solid #cfcfcf;
 	box-shadow:0 1px 2px 2px #CCCCCC;
@@ -1471,7 +1472,7 @@ PRODUCT TEMPLATE
 
 .priceContainer	{/*color:#798287;*/ padding-bottom:12px; border-bottom:1px solid #efefef; margin-bottom:12px; /*padding-top:12px;*/}
 .priceContainer .prompt	{/*display:inline-block; width:120px;*/ font-size: 12px; font-weight: normal;} /* price and msrp prompts */
-.basePrice .value	{font-size:23px; color:#bd6300; font-weight:bold;}
+.basePrice .value	{font-size:18px; color:#000; font-weight:bold;}
 
 .retailPrice .value	{font-size:14px; text-decoration:line-through;}
 .savings	{font-size:13px;}
@@ -1576,16 +1577,16 @@ CATEGORY TEMPLATE
 .mpControls	{padding:2px 6px;}
 
 .catMediaCol	{width:30%; padding-right:24px;display:table-cell;}
-.catMediaContainer	{background:#e6e6e6; padding:8px; margin-right:24px;float:left;width:482px;}
+.catMediaContainer	{/*background:#e6e6e6; padding:8px; */margin-right:24px;float:left;width:300px;}
 .catBigImageContainer	{margin-bottom:8px; border:1px solid #bcc0c3;}
-.catVideoContainer	{border:1px solid #939393; background:#ffffff; padding:8px;}
+.catVideoContainer	{/*border:1px solid #939393; background:#ffffff;*/ padding:8px;}
 .catVideoContainer .vidThumb	{float:left; margin-right:8px;}
 .catVideoContainer h2	{color:#655e4e; font-size:16px; font-weight:normal; padding:0; margin:0;}
 .catVideoContainer P	{margin:2px 0; padding:0; font-size:13px;}
 .catDesc {float:left; width:465px;}
 .textBlock {display:inline;}
 
-.categoryList li	{height:300px;}
+.categoryList li	{height:auto;}
 .productList li	{}
 .productList h5, .categoryList h5 {
     font-size:12px;
@@ -1601,7 +1602,10 @@ CATEGORY TEMPLATE
 .pfrom{  display: inline-block;
     padding: 7px 0;}
 .cents{ vertical-align:super; font-size:12px;}
-.categoryList li, .productList li	{width:200px;  padding:0 10px 0 0px; color:#000; font-size:13px;}
+.categoryList li{width:220px;  padding:0px; color:#000; font-size:13px;}
+.categoryList .catName{ height:34px; background:#dedcd5;height: 34px; margin: -50px 0 0; position: relative; padding:16px 0 0 !important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70);-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;}
+.fluidList li{ margin:10px 0 10px 13px;}
+.productList li	{width:200px; min-height:300px; border:none;  padding:0 10px 0 0px; color:#000; font-size:13px;}
 .price{ font-weight:bold !important; font-size:18px !important;}
 .catDesc .categoryList li {height:auto; width:auto;} 
 .categoryBox, .productBox	{border:1px solid #d2d2d2;} /* separate class for border because 'categoryList' is shared and not all lists need a border. */
@@ -1609,7 +1613,7 @@ CATEGORY TEMPLATE
 
 .productInfoPadding h5	{font-weight:normal; margin-bottom:8px;font-size:100%;}
 .pricing .retailPrice	{text-decoration:line-through}
-.pricing .basePrice	{color:#c95b04;}
+.pricing .basePrice	{color:#000;}
 
 .pricing .savings	{font-size:13px; font-style:italic;}
 
