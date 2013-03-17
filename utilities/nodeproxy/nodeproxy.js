@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // STEP1: setup & test proxy
 // 1a. download + install node.js 
-// 1b. npm install http-proxy
+// 1b. npm install http-proxy colors
 // 1c. open cmd window and run "node nodeproxy.js"
 // 1d. open firefox, chrome, ie, etc. on your machine go to the proxy settings and put in 127.0.0.1:8081 and select 'proxy all protocols'
 // 1e. visit any website on the internet - you will see url/requests passing through your local proxy
