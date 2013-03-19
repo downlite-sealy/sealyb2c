@@ -73,7 +73,7 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #c76400; background: #fdf0e2 url(images/ui-bg_highlight-soft_55_fdf0e2_1x100.png) 50% top repeat-x; color: #363636; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #c76400; background: #1690c8; color: #fff; text-transform:uppercase; }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #990000; background: #ffc7c7 url(images/ui-bg_inset-soft_95_ffc7c7_1x100.png) 50% bottom repeat-x; color: #990000; }
 .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #990000; }
@@ -573,7 +573,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 
 
-.rightA{ width:150px; float:left;}
+.rightA{ width:150px; float:right;}
 .rightA h3{ color: #000000;font-size: 12px;margin:0px 0 7px;}
 .rightA ul{ list-style:none; margin:0px; padding:0px; line-height:22px;}
 .rightA ul li a{ font-size:12px; font-weight:normal;font-family:"Open Sans";}
@@ -582,9 +582,14 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .needhelp a{color:#1690c8; text-decoration:none; font-weight:bold;}
 .needhelp a:hover{color:#1690c8; text-decoration: underline;}
 
+.rightA1{ width:140px; float:right;}
+.rightA1 h3{ color: #000000;font-size: 12px;margin:0px 0 7px;}
+.rightA1 ul{ list-style:none; margin:0 0 15px; padding:0px; line-height:22px;}
 
-
-
+#contactForm {
+    float: none;
+    margin: 0px;
+}
 
 
 
@@ -621,7 +626,7 @@ body{
     background-repeat: repeat-x;
     margin: 0;
     padding: 0;
-	font-family:'PT Sans', arial, sans-serif;
+	font-family:"Open Sans";
 	color:#000;
 }
 
@@ -1407,15 +1412,30 @@ footer:after {
 .copywrite p font{
 	color:#60d9ec;
 }
+#customerNav{ width:auto;}
+.textf {
+    border:1px solid #CCCCCC;
+    height: 26px;
+    margin: 0 0 8px;
+    padding: 0 9px;
+    width: 232px;
+}
+#privacyArticle{font-family:"Open Sans"; font-size:12px;}
+.Cleft{ width:282px; float:left;}
+.Cleft input{ width:274px; height:14px; border:#cccccc solid 1px;}
+.Cright{ width:380px; float:left;font-family:"Open Sans"; margin-left:43px; font-size:12px; line-height:19px;}
 
+#contactForm input, #contactForm textarea {width: 256px; padding:10px; border:#cccccc solid 1px;}
+#contactForm fieldset { margin-right:0px;padding:0px; border:0px;}
 
-
+#contactForm div {margin-bottom: 8px;}
+#Submit{ padding:0px !important; border:none !important; width:151px !important; height:30px !important;}
 
 /* homepage */
 .homeTextBannerBlock	{border:#595959 dotted 1px; padding:6px; width:48%; margin-bottom:8px;}
 .homeTextBannerBlock img	{float:left; margin-right:6px;}
 
-.homeTextBannerBlock h1	{color:#5d5d44; margin:0; font-size:13px; font-weight:normal; font-family:'PT Sans', arial, sans-serif; letter-spacing:2px;}
+.homeTextBannerBlock h1	{color:#5d5d44; margin:0; font-size:13px; font-weight:normal; font-family:"Open Sans";, arial, sans-serif; letter-spacing:2px;}
 .homeTextBannerBlock p	{margin:0; font-size:12px; line-height:15px;}
 
 .bannerDuoContainer	{margin-bottom:29px;}
@@ -1470,7 +1490,7 @@ PRODUCT TEMPLATE
 
 .stid, .mfg	{margin-bottom:8px;}
 
-.imageContainer	{background:#e6e6e6; padding:10px;}
+.imageContainer	{ padding:10px;}
 .prodImages img, .imageContainer img	{border:1px solid #b1b1af;}
 #prodViewerTable .prodThumbs div:last-child	{margin-right:0;}
 
@@ -1558,7 +1578,7 @@ PRODUCT TEMPLATE
 .tabbedProductContentTD .ui-tabs {padding:0; font-size:16px; font-weight:normal;}
 .tabbedProductContent .tabContent	{font-size:16px; font-weight:normal;}
 .tabbedProductContentTD .ui-tabs .ui-tabs-nav	{padding:0;}
-.tabbedProductContentTD .ui-tabs .ui-tabs-nav li	{margin:0 -3px 0px 0; font-family: 'PT Sans',arial,sans-serif; width:20%; font-size:12px;}
+.tabbedProductContentTD .ui-tabs .ui-tabs-nav li	{margin:0 -3px 0px 0; font-family:"Open Sans"; width:20%; font-size:12px;}
 .tabbedProductContentTD .ui-tabs-panel	{
 	border:1px solid #d9d9d9;
 	-moz-border-radius: 3px;
@@ -1596,7 +1616,7 @@ CATEGORY TEMPLATE
 
 /* breadcrumb, used on the category pages */
 
-.breadcrumb	{margin:0px 0; font-size:11px; width:50%;float:left;}
+.breadcrumb	{margin:0 0 10px; font-size:11px; width:50%;float:left;}
 .breadcrumb li	{padding:0; margin:0; cursor:pointer; padding-right:10px;}
 .breadcrumb li:after	{content:" > "; padding-left:10px; font-size:10px; font-weight:bold; color:#999999;}
 .breadcrumb li:last-child:after	{content:"";}
@@ -1605,17 +1625,23 @@ CATEGORY TEMPLATE
 
 .socialLinks {margin-top:12px;}
 
-.mpControls	{padding:2px 6px;}
+.mpControls	{padding:2px 6px; margin:15px 0;}
 
 .catMediaCol	{width:30%; padding-right:24px;display:table-cell;}
 .catMediaContainer	{/*background:#e6e6e6; padding:8px; */margin-right:24px;float:left;width:300px;}
 .catBigImageContainer	{margin-bottom:8px; border:1px solid #bcc0c3;}
 .catVideoContainer	{/*border:1px solid #939393; background:#ffffff;*/ padding:8px;}
+
 .catVideoContainer .vidThumb	{float:left; margin-right:8px;}
 .catVideoContainer h2	{color:#655e4e; font-size:16px; font-weight:normal; padding:0; margin:0;}
 .catVideoContainer P	{margin:2px 0; padding:0; font-size:13px;}
 .catDesc {float:left; margin-right: 20px; width: 445px;}
-.textBlock {display:inline;}
+.textBlock {display:inline;font-family:"Open Sans"; font-size:12px;}
+.sideline a {
+    display: block;
+    padding:0px 0;
+    text-decoration: none;font-family:"Open Sans"; font-size:12px;
+}
 
 .categoryList li	{height:auto;}
 .productList li	{}
@@ -1635,13 +1661,37 @@ CATEGORY TEMPLATE
 .cents{ vertical-align:super; font-size:12px;}
 .categoryList li{width:220px;  padding:0px; color:#000; font-size:13px;}
 .categoryList .catName{ height:34px; background:#dedcd5;height: 34px; margin: -50px 0 0; position: relative; padding:16px 0 0 !important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70);-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;}
+.categoryTemplate .fluidList li{ margin:10px 0 0px 13px;}
 .fluidList li{ margin:0px 0 0px 13px;}
 .productList li	{width:200px; min-height:300px; border:none;  padding:0 10px 0 0px; color:#000; font-size:13px;}
+#checkoutStuffList li{width:200px; min-height:auto; border:none;  padding:0 10px 30px 0px; color:#000; font-size:13px;}
+.preflightInputContainer label {display: inline-block; width: auto !important;}
+#want-bill_to_ship_cb{ height:auto !important;}
+#chkoutShipMethodsLegend, #chkoutPayOptionsLegend, #chkoutOrderNotesLegend, #chkoutPreflightLegend, #chkoutBillAddressLegend, #chkoutAccountInfoLegend{ padding:5px 10px;}
+#chkoutCartSummary legend{ padding:5px 10px;}
+#chkoutBillAddressFieldset, #chkoutPayOptionsFieldset, #chkoutOrderNotesFieldset, #chkoutShipMethodsFieldset, #chkoutPreflightFieldset{ margin-bottom:15px; padding:10px 10px 15px 40px;}
+#chkoutAccountInfoFieldset{ padding:15px 10px 10px 40px; margin:0 0 15px;}
+#data-bill_email{border:1px solid #CCCCCC;height: 24px;padding: 0 9px; margin:0 10px 20px;}
+#chkoutCartSummary{ padding:15px 10px 10px 40px;}
+#shipMethodsContainer{ margin:10px 0 0 0px;}
+#billAddressUL li{ margin:0 0 10px 0px;}
+.preflightInputContainer {float: left;margin: 0 30px 0 0; width: 45%;}
+#preflightAccountInputs h2{ margin-bottom:20px;}
+#preflightAccountInputs label{ width:73px !important; display:inline-block;}
+#preflightAccountInputs input{border:1px solid #CCCCCC;height: 24px;padding: 0 9px; margin-bottom:10px; margin-right:10px;}
+#accountInfoContainer input{border:1px solid #CCCCCC;height: 24px;padding: 0 9px; margin-bottom:10px;}
+#accountInfoContainer select{border:1px solid #CCCCCC;height: 26px;padding:3px 3px 3px; margin:0px 0 10px -4px;}
+#billAddressUL li label, #chkoutAccountInfoFieldset li label{ width:200px; display: inline-block;}
+#billAddressUL input{ border:1px solid #CCCCCC;height: 24px;padding: 0 9px;}
+#preflightGuestInputs h2{ margin-bottom:20px;}
+#orderNotesContainer textarea{ width:350px;border:1px solid #CCCCCC;padding: 9px;}
+#giftcardCode{ border:1px solid #CCCCCC;height: 24px;padding: 0 9px;}
+.prodName{ width:350px;}
 .price{ font-weight:bold !important; font-size:18px !important;}
 .catDesc .categoryList li {height:auto; width:auto;} 
 .categoryBox, .productBox	{border:1px solid #d2d2d2;} /* separate class for border because 'categoryList' is shared and not all lists need a border. */
 .categoryList .catName, .productList .productInfoPadding	{text-align:center; padding:8px;}
-
+#addGiftcardBtn, #guestCheckoutBtn{ background:#0099cc; border-radius:0px; border:0px; color:#fff;font-family: 'Montserrat', sans-serif; font-size:12px; padding:3px 9px;}
 .productInfoPadding h5	{font-weight:normal; margin-bottom:8px;font-size:100%;}
 .pricing .retailPrice	{text-decoration:line-through}
 .pricing .basePrice	{color:#000;}
