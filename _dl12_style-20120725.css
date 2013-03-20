@@ -56,7 +56,7 @@
 .ui-widget { font-family: helvetica,Arial,sans-serif; font-size: 1.1em; }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: helvetica,Arial,sans-serif; font-size: 1em; }
-.ui-widget-content { border: 1px solid #efefef; background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #615e59; }
+.ui-widget-content { border: 1px solid #efefef; background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #000; }
 .ui-widget-content a { color: #615e59; }
 .ui-widget-header { border: 1px solid #cccccc; background: #efefef url(images/ui-bg_diagonals-medium_45_efefef_40x40.png) 50% 50% repeat; color: #615e59; font-weight: bold; }
 .ui-widget-header a { color: #615e59; }
@@ -73,7 +73,7 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #c76400; background: #1690c8; color: #fff; text-transform:uppercase; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #c76400; background: #ffffff url(images/ui-bg_inset-soft_75_ffffff_1x100.png) 50% 50% repeat-x; color: #615e59; text-transform:uppercase; }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #990000; background: #ffc7c7 url(images/ui-bg_inset-soft_95_ffc7c7_1x100.png) 50% bottom repeat-x; color: #990000; }
 .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #990000; }
@@ -577,7 +577,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .rightA h3{ color: #000000;font-size: 12px;margin:0px 0 7px;}
 .rightA ul{ list-style:none; margin:0px; padding:0px; line-height:22px;}
 .rightA ul li a{ font-size:12px; font-weight:normal;font-family:"Open Sans";}
-.needhelp{font-family:"Open Sans"; font-size:12px; text-align:center;}
+.needhelp{font-family:"Open Sans"; font-size:12px; text-align:center; margin:0px;}
 .needhelp b{font-family: 'Montserrat', sans-serif; font-size:14px;}
 .needhelp a{color:#1690c8; text-decoration:none; font-weight:bold;}
 .needhelp a:hover{color:#1690c8; text-decoration: underline;}
@@ -1425,7 +1425,7 @@ footer:after {
 .Cleft input{ width:274px; height:14px; border:#cccccc solid 1px;}
 .Cright{ width:380px; float:left;font-family:"Open Sans"; margin-left:43px; font-size:12px; line-height:19px;}
 
-#contactForm input, #contactForm textarea {width: 256px; padding:10px; border:#cccccc solid 1px;}
+#contactForm input, #contactForm textarea { margin:0px;width: 256px; padding:10px; border:#cccccc solid 1px;}
 #contactForm fieldset { margin-right:0px;padding:0px; border:0px;}
 
 #contactForm div {margin-bottom: 8px;}
@@ -1486,7 +1486,7 @@ PRODUCT TEMPLATE
 .prodViewerAddToCartForm {
     margin-bottom:0px;
 }
-#prodViewerTable, .prodViewerContainer	{margin-bottom:20px;} 
+#prodViewerTable, .prodViewerContainer	{margin-bottom:20px; position:relative;} 
 
 .stid, .mfg	{margin-bottom:8px;}
 
@@ -1548,12 +1548,13 @@ PRODUCT TEMPLATE
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f4',GradientType=0 ); /* IE6-8 */
 	}
 .qtyAndATCContainer fieldset {margin:0 0 3px;}
-#addToCartBtn	{ padding:0; margin-left:4px 0 0 24px; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:60px; text-indent:30000px;margin:3px 0 0 3px;cursor:pointer;}
+#addToCartBtn	{ padding:0; margin-left:4px 0 0 24px; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:30000px;margin:0px;cursor:pointer;}
 .prodViewerAddToCartForm select{ width:230px; padding:5px;border:#cccccc solid 1px;}
 .zform_number { width: 128px; padding:6px; margin-left:18px; border:#cccccc solid 1px;}
-.qtyInput	{font-size:10px; line-height:14px;}
+.qtyInput	{font-size:10px; line-height:14px; border:#cccccc solid 1px;}
 .qtyInput input	{display:block;}
 .atcSuccessMessage	{clear:both;}
+#data-ship_zip{border:#cccccc solid 1px;}
 
 #prodDescTopContainer	{float:left; overflow:hidden; position:relative;}
 #prodDescTopContainer ul{ list-style:none; margin:0 0 13px; padding:0px;}
@@ -1616,7 +1617,7 @@ CATEGORY TEMPLATE
 
 /* breadcrumb, used on the category pages */
 
-.breadcrumb	{margin:0 0 10px; font-size:11px; width:50%;float:left;}
+.breadcrumb	{margin:0 0 10px; font-size:12px; width:50%;float:left;}
 .breadcrumb li	{padding:0; margin:0; cursor:pointer; padding-right:10px;}
 .breadcrumb li:after	{content:" > "; padding-left:10px; font-size:10px; font-weight:bold; color:#999999;}
 .breadcrumb li:last-child:after	{content:"";}
@@ -1640,6 +1641,7 @@ CATEGORY TEMPLATE
 .sideline a {
     display: block;
     padding:0px 0;
+	color:#128EC7;
     text-decoration: none;font-family:"Open Sans"; font-size:12px;
 }
 
@@ -1667,12 +1669,18 @@ CATEGORY TEMPLATE
 #checkoutStuffList li{width:200px; min-height:auto; border:none;  padding:0 10px 30px 0px; color:#000; font-size:13px;}
 .preflightInputContainer label {display: inline-block; width: auto !important;}
 #want-bill_to_ship_cb{ height:auto !important;}
+#reviewFrm input, textarea{border:1px solid #CCCCCC;height: 24px;padding: 0 9px; margin-left:15px;}
+#reviewFrm textarea{border:1px solid #CCCCCC;padding:9px; margin-left:15px;}
+#subscribeFrm input{border:1px solid #CCCCCC;height: 24px;padding: 0 9px;}
+#newsletter-1{ padding:0px; height:auto !important;}
+#Subscribe{background:#0099cc; border-radius:0px; border:0px !important; color:#fff;font-family: 'Montserrat', sans-serif; font-size:12px; padding:3px 9px;}
+#reviewFrm select{border:1px solid #CCCCCC;padding:2px;margin-left:15px;}
 #chkoutShipMethodsLegend, #chkoutPayOptionsLegend, #chkoutOrderNotesLegend, #chkoutPreflightLegend, #chkoutBillAddressLegend, #chkoutAccountInfoLegend{ padding:5px 10px;}
 #chkoutCartSummary legend{ padding:5px 10px;}
 #chkoutBillAddressFieldset, #chkoutPayOptionsFieldset, #chkoutOrderNotesFieldset, #chkoutShipMethodsFieldset, #chkoutPreflightFieldset{ margin-bottom:15px; padding:10px 10px 15px 40px;}
 #chkoutAccountInfoFieldset{ padding:15px 10px 10px 40px; margin:0 0 15px;}
 #data-bill_email{border:1px solid #CCCCCC;height: 24px;padding: 0 9px; margin:0 10px 20px;}
-#chkoutCartSummary{ padding:15px 10px 10px 40px;}
+#chkoutCartSummary{ padding:15px 10px 10px 40px; line-height:18px;}
 #shipMethodsContainer{ margin:10px 0 0 0px;}
 #billAddressUL li{ margin:0 0 10px 0px;}
 .preflightInputContainer {float: left;margin: 0 30px 0 0; width: 45%;}
@@ -1686,12 +1694,16 @@ CATEGORY TEMPLATE
 #preflightGuestInputs h2{ margin-bottom:20px;}
 #orderNotesContainer textarea{ width:350px;border:1px solid #CCCCCC;padding: 9px;}
 #giftcardCode{ border:1px solid #CCCCCC;height: 24px;padding: 0 9px;}
+#cartStuffList li{ min-height:auto; margin:0 0 15px; padding:0 0 15px; border-bottom:1px dotted #EFEFEF;}
 .prodName{ width:350px;}
 .price{ font-weight:bold !important; font-size:18px !important;}
 .catDesc .categoryList li {height:auto; width:auto;} 
 .categoryBox, .productBox	{border:1px solid #d2d2d2;} /* separate class for border because 'categoryList' is shared and not all lists need a border. */
 .categoryList .catName, .productList .productInfoPadding	{text-align:center; padding:8px;}
-#addGiftcardBtn, #guestCheckoutBtn{ background:#0099cc; border-radius:0px; border:0px; color:#fff;font-family: 'Montserrat', sans-serif; font-size:12px; padding:3px 9px;}
+#addGiftcardBtn, #guestCheckoutBtn, #userLoginBtn, #addCouponBtn, #continueS, #StoreC, #Review{ background:#0099cc; border-radius:0px; border:0px; color:#fff;font-family: 'Montserrat', sans-serif; font-size:12px; padding:3px 9px;}
+#Review{ background:#0099cc; border-radius:0px; border:0px !important; color:#fff;font-family: 'Montserrat', sans-serif; font-size:12px; padding:3px 9px;}
+#reviewB{ position:absolute; margin:0px 0 0 409px;position: absolute;top: 269px;}
+#chkoutPlaceOrderBtn{background:#0099cc; border-radius:0px; border:0px; color:#fff;font-family: 'Montserrat', sans-serif; font-size:18px; padding:5px 25px;}
 .productInfoPadding h5	{font-weight:normal; margin-bottom:8px;font-size:100%;}
 .pricing .retailPrice	{text-decoration:line-through}
 .pricing .basePrice	{color:#000;}
