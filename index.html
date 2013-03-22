@@ -78,6 +78,7 @@ css files should be included before any .js file to ensure they are downloaded i
 <link rel="stylesheet" type="text/css" href="_downlite_styles.css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
 <script src="jquery.ui.widget.min.js"></script> 
 <script type="text/javascript" src="loadscript.js"></script>
 <script type="text/javascript" src="model.js"></script>
@@ -89,17 +90,10 @@ css files should be included before any .js file to ensure they are downloaded i
 })(document);
 </script>
 
-
-
-
-
-
-
 <script type="text/javascript">
 app.u.loadScript(app.vars.baseURL+"downlite_init.js");
 console.log(" -> domain: "+document.domain);
 </script>
-
 
 
 </head>
@@ -502,31 +496,40 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 			<div class="floatLeft">
 				<div id="slideshowContainer">
                 
-					<div id="slideshowNav"><a class="" href="#">1</a><a class="" href="#">2</a><a class="" href="#">3</a><a class="activeSlide" href="#">4</a><a class="" href="#">5</a></div>
-					<ul style="position: relative;" id="wideSlideshow" class="pics slideshow">
-						<a title="Buy Your Own 50/50 Pillow For Home That You Enjoyed On Vacation" onClick="return showContent('product',{'pid':'750105088655'});" href="#" class="bannerBind">
+					<!--<div id="slideshowNav"><a class="" href="#">1</a><a class="" href="#">2</a><a class="" href="#">3</a><a class="activeSlide" href="#">4</a><a class="" href="#">5</a></div>-->
+                    
+					<ul style="position: relative;" id="wideSlideshow" class="pics slideshow"><a href="#" id="prev"><img src="images/prev.png" width="30" height="100"></a><a href="#" id="next"><img src="images/next.png" width="30" height="100"></a>
+						<a title="Buy Your Own 50/50 Pillow For Home That You Enjoyed On Vacation" caption="hello" onClick="return showContent('product',{'pid':'750105088655'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
-								<img alt="Buy Your Own 50/50 Pillow For Home That You Enjoyed On Vacation" src="images/600x400_2013_50_50_hotel_pillow.jpg" height="432" width="661">
+								<img alt="Buy Your Own 50/50 Pillow For Home That You Enjoyed On Vacation" src="images/600x400_2013_50_50_hotel_pillow.jpg" height="432" width="661"><div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
 							</li>
 						</a>
 						<a title="Sleep Through Winter With Our High Fill Power American Made Down Comforters" onClick="return showContent('product',{'pid':'SDL100CO0320'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
-								<img alt="Sleep Through Winter With Our High Fill Power American Made Down Comforters" src="images/600x400_homepage_650_fp_comforters.jpg" height="432" width="661">
+								<img alt="Sleep Through Winter With Our High Fill Power American Made Down Comforters" src="images/600x400_homepage_650_fp_comforters.jpg" height="432" width="661"> <div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
 							</li>
 						</a>
 						<a title="Hotel Bedding Search For Home - Hundreds Of The Best Hotels" onClick="return showContent('category',{'navcat':'.hotels'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
 								<img alt="Hotel Bedding Search For Home - Hundreds Of The Best Hotels" src="images/600x400_2013_hotel_bedding_search.jpg" height="432" width="661">
-							</li>
+							<div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
+                            </li>
 						</a>
 						<a title="Good Housekeeping PrimaLoft Pillows - Easy Care" onClick="return showContent('product',{'pid':'750105095080'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: block; z-index: 6; opacity: 1; width: 661px; height: 432px;">
 								<img src="images/sterns.jpg" width="620" height="301" alt="">
+                                <div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
 							</li>
 						</a>
 						<a title="Best Entry Level Feather Pillow For Only $25 - Made In The USA" onClick="return showContent('product',{'pid':'SDL100PI0170'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
 								<img alt="Best Entry Level Feather Pillow For Only $25 - Made In The USA" src="images/600x400_2013_best_feather_pillow.jpg" height="432" width="661">
+                                <div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
 							</li>
 						</a>
 					</ul>
@@ -1278,6 +1281,8 @@ It's done this way because ID's hard coded into template are bad mojo (templates
 </tr>
 </table>
 
+<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; withInventory:1; withVariations:1; items_per_page: 25;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul><!-- outputs the product list -->
+
 
 </div><!-- productTemplateQuickView -->
 
@@ -1666,34 +1671,30 @@ onclicks are recursive, so only add it to the parent element.
 -->
 
 <div id='mpControlSpec' class='mpControlContainer'>
-	<div class='mpControls ui-widget ui-state-default ui-corner-top'>
+	<!--<div class='mpControls ui-widget ui-state-default ui-corner-top'>-->
 
-<span class="mpControlsPagination ui-state-active ui-corner-all floatRight paging pointer" data-role='next' title="next page">
-	<span class="ui-icon ui-icon-circle-triangle-e"></span>
+<span class="mpControlsPagination ui-state-active ui-corner-all floatRight paging pointer" data-role='next' title="next page" style="background:none; border:none;">
+	<span style="background:none; color:#1690c8; border:none;text-transform:uppercase; margin-left: 20px;">Next</span>
 </span>
 
 <div class='floatRight ddUlMenu mpControlsPagination'>
-<ul>
-	<li>
-
-	<a href='#' onClick='return false;'>
-	<span data-bind='var:prodlistmeta(page_in_focus); format:text; pretext: page ;'></span>
-	<span data-bind='var:prodlistmeta(total_page_count); format:text; pretext: of ;'></span>	</a>
+<ul><span data-bind='var:prodlistmeta(page_in_focus); format:text; pretext:  ;' style="display:none; color:#000;"></span>
+	<li><a href='#' onClick='return false;'><!--<span data-bind='var:prodlistmeta(total_page_count); format:text; pretext: of ;'></span>-->	</a>
 	<ul data-bind='var:prodlistmeta(total_page_count); format:mpPagesAsListItems; extension:store_prodlist;' class='ui-widget-content ui-corner-bottom'></ul>
 	</li>
 </ul>
 </div>
 
-<span class="mpControlsPagination ui-state-active ui-corner-all floatRight paging pointer" data-role='previous' title="previous page">
-	<span class="ui-icon ui-icon-circle-triangle-w"></span>
+<span class="mpControlsPagination ui-state-active ui-corner-all floatRight paging pointer" data-role='previous' title="previous page" style="background:none; border:none;">
+	<span style="background:none; color:#1690c8; text-transform:uppercase; border:none; margin-left: 20px;">Previous</span>
 </span>	
 
 
-<span data-bind='var:prodlistmeta(page_start_point); format:text; pretext:items ;'></span>
-<span data-bind='var:prodlistmeta(page_end_point); format:text; pretext: - ;'></span>
-<span data-bind='var:prodlistmeta(total_product_count); format:text; pretext: of ;'></span>
-
-	</div><!-- /.mpControls -->
+<!--<span data-bind='var:prodlistmeta(page_start_point); format:text; pretext:items ;'></span>
+<span data-bind='var:prodlistmeta(page_end_point); format:text; pretext: - ;'></span>-->
+<!--<span data-bind='var:prodlistmeta(total_product_count); format:text; pretext: of ;'></span>-->
+ 
+	<!--</div>--><!-- /.mpControls -->
 </div><!-- /#mpControlSpec -->
 
 

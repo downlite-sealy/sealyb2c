@@ -212,11 +212,11 @@ P.query = { 'and':{ 'filters':[ {'term':{'profile':'E31'}},{'term':{'tags':'IS_S
 					$controls = $("<div \/>").addClass('');
 
 //SANITY -> the classes on these buttons are used in quickstart. 					
-					var $prevPageBtn = $("<button \/>").text("Previous Page").button({icons: {primary: "ui-icon-circle-triangle-w"},text: false}).addClass('prevPageButton').on('click.multipagePrev',function(event){
+					var $prevPageBtn = $("<div  style=''\/>").text("Previous").button({icons: {primary: "ui-icon-circle-triangle-w"},text: true}).addClass('prevPageButton').on('click.multipagePrev',function(event){
 						event.preventDefault();
 						app.ext.store_search.u.changePage($list,(pageInFocus - 1),_rtag);
 						});
-					var $nextPageBtn = $("<button \/>").text("Next Page").button({icons: {primary: "ui-icon-circle-triangle-e"},text: false}).addClass('nextPageButton').on('click.multipageNext',function(event){
+					var $nextPageBtn = $("<div \/>").text("Next").button({icons: {primary: "ui-icon-circle-triangle-e"},text: true}).addClass('nextPageButton').on('click.multipageNext',function(event){
 						event.preventDefault();
 						app.ext.store_search.u.changePage($list,(pageInFocus + 1),_rtag);
 						});
@@ -278,13 +278,13 @@ P.query = { 'and':{ 'filters':[ {'term':{'profile':'E31'}},{'term':{'tags':'IS_S
 						
 						if(totalPageCount <= 1)	{app.u.dump(" -> no pagination for results. totalPageCount: "+totalPageCount);} //if there is only 1 page or something went wrong, don't show pagination.
 						else	{
-							$pagination = $("<ul \/>").addClass('pagination resultsMenu');
-							$pagination.addClass('hideInMinimalMode').append($("<li \/>").html("<a href='#'>Page "+pageInFocus+" of "+totalPageCount+"<\/a>"));
-							var $pages = $("<ul \/>");
+							$pagination = $("<div \/>").addClass('pagination resultsMenu');
+							$pagination.addClass('hideInMinimalMode').append($("<div \/>").html("<a href='#' style='display:none;'><\/a>"));
+							var $pages = $("<div style='width:100px; maegin:-2px 0 0;' \/>");
 							for(var i = 1; i <= totalPageCount; i+= 1)	{
-								$("<li \/>").html("<a href='#' data-page='"+i+"'>Page "+i+"<\/a>").appendTo($pages);
+								$("<div style='width:40px; float:left;' \/>").html("<a href='#' data-page='"+i+"'><span  style='display:inline;'\/>"+i+"<\/span><\/a>").appendTo($pages);
 								}
-							$("li:first",$pagination).append($pages);
+							$("div:first",$pagination).append($pages);
 							$("a",$pages).each(function(){
 								$(this).on('click',function(event){
 									event.preventDefault();

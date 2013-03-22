@@ -54,7 +54,7 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget { font-family: helvetica,Arial,sans-serif; font-size: 1.1em; }
-.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget .ui-widget { font-size: 1em; border: 0 none;border-radius: 0 0 0 0;}
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: helvetica,Arial,sans-serif; font-size: 1em; }
 .ui-widget-content { border: 1px solid #efefef; background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #000; }
 .ui-widget-content a { color: #615e59; }
@@ -63,11 +63,11 @@
 
 /* Interaction states
 ----------------------------------*/
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #cccccc; background: #ffffff url(images/ui-bg_inset-soft_75_ffffff_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #615e59; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background:none;color: #1690C8; font-size: 15px;font-weight: bold; border:none; }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #615e59; text-decoration: none; }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #999999; background: #dadada url(images/ui-bg_inset-soft_75_dadada_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {background:none; font-weight:bold; color: #615e59; }
 .ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .checkoutButton { border: 1px solid #a7907e; background: #a7907e url(images/ui-bg_inset-soft_100_a7907e_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .checkoutButton {  background:none;font-weight: bold; color: #ffffff; }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #ffffff; text-decoration: none; }
 .ui-widget :active { outline: none; }
 
@@ -86,14 +86,14 @@
 ----------------------------------*/
 
 /* states and images */
-.ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_615e59_256x240.png); }
-.ui-widget-content .ui-icon {background-image: url(images/ui-icons_615e59_256x240.png); }
-.ui-widget-header .ui-icon {background-image: url(images/ui-icons_615e59_256x240.png); }
-.ui-state-default .ui-icon { background-image: url(images/ui-icons_615e59_256x240.png); }
-.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(images/ui-icons_454545_256x240.png); }
-.ui-state-active .ui-icon {background-image: url(images/ui-icons_ffffff_256x240.png); }
-.ui-state-highlight .ui-icon {background-image: url(images/ui-icons_c76400_256x240.png); }
-.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(images/ui-icons_990000_256x240.png); }
+.ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_615e59_256x240.png); display:none; }
+.ui-widget-content .ui-icon {background-image: url(images/ui-icons_615e59_256x240.png); display:none;}
+.ui-widget-header .ui-icon {background-image: url(images/ui-icons_615e59_256x240.png); display:none;}
+.ui-state-default .ui-icon { background-image: url(images/ui-icons_615e59_256x240.png); display:none;}
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(images/ui-icons_454545_256x240.png); display:none;}
+.ui-state-active .ui-icon {background-image: url(images/ui-icons_ffffff_256x240.png); display:none;}
+.ui-state-highlight .ui-icon {background-image: url(images/ui-icons_c76400_256x240.png); display:none;}
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(images/ui-icons_990000_256x240.png); display:none;}
 
 /* positioning */
 .ui-icon-carat-1-n { background-position: 0 0; }
@@ -383,6 +383,8 @@
 	padding:.2em .4em;
 	line-height:1.5;
 	zoom:1;
+	color:#1690C8;
+	font-weight:bold;
 }
 .ui-menu .ui-menu-item a.ui-state-hover,
 .ui-menu .ui-menu-item a.ui-state-active {
@@ -643,10 +645,16 @@ a img{
 }
 
 a.highlight	{color:#d2590a;}
-
-
+.ddUlMenu li ul li {
+    color: #1690c8;
+    cursor: pointer;
+	padding:0 10px 0 15px;
+}
+#prev img{ margin: 200px 0 0 6px;position: absolute;z-index: 99999;}
+#next img{ margin: 200px 0 0 590px;position: absolute;z-index: 99999;}
 h1	{color:#000000; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:0;}
-
+.ui-widget-content{ }
+.ui-corner-all li{ clear:none !important; width:30px !important; float:left;}
 /*My CSS*/
 body{ background:url(images/bg.gif); margin:0px; padding:0px; font-family: 'Montserrat', sans-serif;font-size:13px; font-weight:normal;}
 a{ text-decoration:none; color:#128ec7;}
@@ -755,7 +763,10 @@ nav a:hover{ color:#007dc0; text-decoration:none;}
 .email{ width:232px; float:left; padding:10px; margin:0 49px 0 10px;background:#f3f3f3;}
 .icons{ width:273px; float:left; padding:10px 0 0 0;}
 .icons img{ margin-right:21px;}
-
+.resultsMenuContainer {
+    left: 3px;
+    position: relative; float:right;
+    top: 1px;}
 footer{width:100%; 
 	display: block;
     position: relative;}
@@ -1717,3 +1728,15 @@ CATEGORY TEMPLATE
 #mainContentArea_customer .mainColumn	{width:750px;}
 #buyerAddresses address	{width:300px; margin-right:12px; float:left;}
 #buyerAddresses .billAddressContainer, #buyerAddresses .shipAddressContainer	{clear:both;}
+
+.box1{
+    position:relative;
+    background:#444;
+    width:160px;
+    height:200px;
+  }
+  .box1 span{
+    position:absolute;
+    left:0px;
+    display:none;
+  }
