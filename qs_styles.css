@@ -458,6 +458,7 @@ CHECKOUT
 	margin:0;
 	padding:0;
 	list-style:none;
+	display:inline;
 	}
 
 /* tier 1 menu link style (ok to change this). will affect tier2 also */
@@ -470,11 +471,12 @@ CHECKOUT
 
 
 .ddUlMenu li ul {
-	left: -999em;
-	margin: 14px 0px 0 -20px; /* top margin should = tier 1 line-height - 1px...ish */
-	position: absolute;
+	/*left: -999em;*/
+	/*margin: 14px 0px 0 -20px; /* top margin should = tier 1 line-height - 1px...ish */
+	/*position: absolute;
 	width: 160px;
-	z-index: 9999;
+	z-index: 9999;*/
+	border:none;
 	}
 
 .ddUlMenu li:hover ul {
@@ -482,7 +484,7 @@ CHECKOUT
 	}
 
 /* tier 2 nav */
-.ddUlMenu li ul li	{cursor:pointer;} /* click is likely binded to li, so make it all a cursor */
+.ddUlMenu li ul li	{cursor:pointer; color:#000099;} /* click is likely binded to li, so make it all a cursor */
 .ddUlMenu li ul a {
 	background: none;
 	line-height:24px;
@@ -490,6 +492,7 @@ CHECKOUT
 	display:block;
 	border: 0 none;
 	width: 160px;
+	
 	}
 
 

@@ -188,7 +188,7 @@ app.u.appInitComplete = function(P)	{
 			
     app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 		var $target=$('#wideSlideshow');
-		$target.cycle({prev: '#prev',next: '#next',fx:'fade',speed:'slow',timeout:5000,pager:'#slideshowNav',text: true,pagerAnchorBuilder:function(index,el){return'';},slideExpr:'li'});	
+		$target.cycle({prev: '#prev',next: '#next',fx:'fade',speed:'slow',timeout:5000,pager:'#slideshowNav',text: true,pagerAnchorBuilder:function(index,el){return '';},slideExpr:'li'});	
 		//$target.cycle({fx:'swing',speed:3,timeout:5000,pager:'#slideshowNav',pagerAnchorBuilder:function(index,el){return' ';},slideExpr:'li'});
 		}]);
 		

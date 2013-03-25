@@ -418,7 +418,7 @@ input.ui-button { padding: .4em 1em; }
 .ui-button img{ margin:0 0 0 3px;}
 
 /*button icon element(s) */
-.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { position: absolute; top: 50%; margin-top: -8px; }
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { position: absolute; top: 50%; margin-top: -8px; display:block;}
 .ui-button-icon-only .ui-icon { left: 50%; margin-left: -8px; }
 .ui-button-text-icon-primary .ui-button-icon-primary, .ui-button-text-icons .ui-button-icon-primary, .ui-button-icons-only .ui-button-icon-primary { left: .5em; }
 .ui-button-text-icon-secondary .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
@@ -654,7 +654,9 @@ a.highlight	{color:#d2590a;}
 #next img{ margin: 200px 0 0 590px;position: absolute;z-index: 99999;}
 h1	{color:#000000; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:0;}
 .ui-widget-content{ }
-.ui-corner-all li{ clear:none !important; width:30px !important; float:left;}
+.ui-corner-all li{ clear: both;
+    float: left;
+    width: 434px;}
 /*My CSS*/
 body{ background:url(images/bg.gif); margin:0px; padding:0px; font-family: 'Montserrat', sans-serif;font-size:13px; font-weight:normal;}
 a{ text-decoration:none; color:#128ec7;}
@@ -1490,6 +1492,7 @@ PRODUCT TEMPLATE
 */
 
 .prodViewerAddToCartForm fieldset	{margin: inherit 0; padding:inherit 0; border:none; float:left;}
+
 .prodViewerAddToCartForm label	{width:150px; /*display:inline-block;*/ display:none; margin-right:5px; text-align:left;}
 .prodViewerAddToCartForm label:after	{content:":"}
 .addToCartButton	{cursor:pointer}
@@ -1559,7 +1562,9 @@ PRODUCT TEMPLATE
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f4',GradientType=0 ); /* IE6-8 */
 	}
 .qtyAndATCContainer fieldset {margin:0 0 3px;}
-#addToCartBtn	{ padding:0; margin-left:4px 0 0 24px; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:30000px;margin:0px;cursor:pointer;}
+#wishlist{margin: 0 0 0 409px; position: absolute;top: 269px;}
+#Quantity select{ width:142px;padding:5px;border:#cccccc solid 1px;}
+#addToCartBtn	{ padding:0; position: absolute; top:209px; margin:0 0 0 -88px; overflow:hidden; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:-1000px;cursor:pointer;}
 .prodViewerAddToCartForm select{ width:230px; padding:5px;border:#cccccc solid 1px;}
 .zform_number { width: 128px; padding:6px; margin-left:18px; border:#cccccc solid 1px;}
 .qtyInput	{font-size:10px; line-height:14px; border:#cccccc solid 1px;}
@@ -1705,7 +1710,7 @@ CATEGORY TEMPLATE
 #preflightGuestInputs h2{ margin-bottom:20px;}
 #orderNotesContainer textarea{ width:350px;border:1px solid #CCCCCC;padding: 9px;}
 #giftcardCode{ border:1px solid #CCCCCC;height: 24px;padding: 0 9px;}
-#cartStuffList li{ min-height:auto; margin:0 0 15px; padding:0 0 15px; border-bottom:1px dotted #EFEFEF;}
+#cartStuffList li{ min-height:auto; line-height:26px; margin:0 0 15px; padding:0 0 15px;  border-bottom:1px dotted #EFEFEF;}
 .prodName{ width:350px;}
 .price{ font-weight:bold !important; font-size:18px !important;}
 .catDesc .categoryList li {height:auto; width:auto;} 
@@ -1713,14 +1718,15 @@ CATEGORY TEMPLATE
 .categoryList .catName, .productList .productInfoPadding	{text-align:center; padding:8px;}
 #addGiftcardBtn, #guestCheckoutBtn, #userLoginBtn, #addCouponBtn, #continueS, #StoreC, #Review{ background:#0099cc; border-radius:0px; border:0px; color:#fff;font-family: 'Montserrat', sans-serif; font-size:12px; padding:3px 9px;}
 #Review{ background:#0099cc; border-radius:0px; border:0px !important; color:#fff;font-family: 'Montserrat', sans-serif; font-size:12px; padding:3px 9px;}
-#reviewB{ position:absolute; margin:0px 0 0 409px;position: absolute;top: 269px;}
+#reviewB{ position:absolute; margin:0px 0 0 409px;position: absolute;top: 329px;}
+.appMessage{ width:380px;}
 #chkoutPlaceOrderBtn{background:#0099cc; border-radius:0px; border:0px; color:#fff;font-family: 'Montserrat', sans-serif; font-size:18px; padding:5px 25px;}
 .productInfoPadding h5	{font-weight:normal; margin-bottom:8px;font-size:100%;}
 .pricing .retailPrice	{text-decoration:line-through}
 .pricing .basePrice	{color:#000;}
 
 .pricing .savings	{font-size:13px; font-style:italic;}
-
+.cartStuffContainer ul li{ height:20px;}
 
 
 /* customer section */
@@ -1730,13 +1736,19 @@ CATEGORY TEMPLATE
 #buyerAddresses .billAddressContainer, #buyerAddresses .shipAddressContainer	{clear:both;}
 
 .box1{
-    position:relative;
+    position:absolute;
+	top:200px;
     background:#444;
-    width:160px;
-    height:200px;
+   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter: alpha(opacity=50);
+	-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;
+    width:518px;
+	padding:20px 40px 0 56px; 
+	color:#fff;
+	margin:0 0 0 6px;
+	font-size:12px;
+    height:80px;
   }
   .box1 span{
-    position:absolute;
-    left:0px;
-    display:none;
+   
+   
   }

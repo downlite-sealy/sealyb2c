@@ -291,6 +291,7 @@ Sealy Corporation, 8153 Duke Blvd, Mason Oh 45040.<br>
 2013 All rights reserved. E-commerce by <b style="color:#128EC7;">Zoovy</b></div><div class="cb"></div>
 </div>
 </footer>
+
 		<!--<div class="sign_up_form">
 			<div class="sign_up_form_inner">
 				<div class="social_icon">
@@ -501,35 +502,37 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 					<ul style="position: relative;" id="wideSlideshow" class="pics slideshow"><a href="#" id="prev"><img src="images/prev.png" width="30" height="100"></a><a href="#" id="next"><img src="images/next.png" width="30" height="100"></a>
 						<a title="Buy Your Own 50/50 Pillow For Home That You Enjoyed On Vacation" caption="hello" onClick="return showContent('product',{'pid':'750105088655'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
-								<img alt="Buy Your Own 50/50 Pillow For Home That You Enjoyed On Vacation" src="images/600x400_2013_50_50_hotel_pillow.jpg" height="432" width="661"><div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+								<img alt="Buy Your Own 50/50 Pillow For Home That You Enjoyed On Vacation" src="images/600x400_2013_50_50_hotel_pillow.jpg" height="432" width="661"><div class="box1"><h3>Slider 1</h3><span>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus </span>
                                 </div>
 							</li>
 						</a>
 						<a title="Sleep Through Winter With Our High Fill Power American Made Down Comforters" onClick="return showContent('product',{'pid':'SDL100CO0320'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
-								<img alt="Sleep Through Winter With Our High Fill Power American Made Down Comforters" src="images/600x400_homepage_650_fp_comforters.jpg" height="432" width="661"> <div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+								<img alt="Sleep Through Winter With Our High Fill Power American Made Down Comforters" src="images/600x400_homepage_650_fp_comforters.jpg" height="432" width="661"> <div class="box1"><h3>Slider 2</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the </span>
                                 </div>
 							</li>
 						</a>
 						<a title="Hotel Bedding Search For Home - Hundreds Of The Best Hotels" onClick="return showContent('category',{'navcat':'.hotels'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
 								<img alt="Hotel Bedding Search For Home - Hundreds Of The Best Hotels" src="images/600x400_2013_hotel_bedding_search.jpg" height="432" width="661">
-							<div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+							<div class="box1"><h3>Slider 3</h3><span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</span>
                                 </div>
                             </li>
 						</a>
+                        
 						<a title="Good Housekeeping PrimaLoft Pillows - Easy Care" onClick="return showContent('product',{'pid':'750105095080'});" href="#" class="bannerBind">
-							<li style="position: absolute; top: 0px; left: 0px; display: block; z-index: 6; opacity: 1; width: 661px; height: 432px;">
-								<img src="images/sterns.jpg" width="620" height="301" alt="">
-                                <div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+							<li style="position: absolute; top: 0px; left: 0px; display: block;  width: 661px; height: 432px;">
+								<img alt="Sleep Through Winter With Our High Fill Power American Made Down Comforters" src="images/600x400_homepage_650_fp_comforters.jpg" height="432" width="661">
+                                <div class="box1"><h3>Slider 4</h3><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</span>
                                 </div>
 							</li>
+                            
 						</a>
+                        
 						<a title="Best Entry Level Feather Pillow For Only $25 - Made In The USA" onClick="return showContent('product',{'pid':'SDL100PI0170'});" href="#" class="bannerBind">
 							<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0; width: 661px; height: 432px;">
 								<img alt="Best Entry Level Feather Pillow For Only $25 - Made In The USA" src="images/600x400_2013_best_feather_pillow.jpg" height="432" width="661">
-                                <div class="box1"><h3>Lorem Ipsum</h3><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-                                </div>
+                   <div class="box1"><h3>Slider 5</h3><span>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</span></div>
 							</li>
 						</a>
 					</ul>
@@ -859,6 +862,7 @@ container ul should have lineItemProdlist class on it instead of productList
 <span class="ui-icon ui-icon-star"></span>
 </button>
 
+
 <button class='ui-state-default ui-corner-all' title='remove item from list' onClick="app.ext.myRIA.a.removeItemFromBuyerList({'stid':$(this).closest('[data-pid]').attr('data-pid'),'listID':$(this).closest('[data-buyerlistid]').attr('data-buyerlistid')},{'parentID':$(this).closest('li').attr('id')});">
 <span class="ui-icon ui-icon-trash"></span>
 </button>
@@ -994,7 +998,8 @@ this will likely become more flexible in the future. ###
     <!--<h5 data-bind='var: product(zoovy:prod_mfg); format:searchLink; extension:myRIA; pretext: Manufacturer: ;'></h5>-->
     
 	
-		<fieldset data-bind='var: product(pid); format:atcVariations; extension:store_product;' class='borderNone'></fieldset><fieldset data-bind='var: product(pid); format:atcQuantityInput; extension:store_product;' class='borderNone floatRight'></fieldset>
+		<fieldset data-bind='var: product(pid); format:atcVariations; extension:store_product;' class='borderNone'></fieldset>
+        <fieldset data-bind='var: product(pid); format:atcQuantityInput; extension:store_product;' class='borderNone' id='Quantity'></fieldset>
 		<!--<div class='qtyAndATCContainer clearfix qtyInput'>
 			
 			
@@ -1017,7 +1022,7 @@ this will likely become more flexible in the future. ###
     <input type='submit' value='Add to Cart' class='ui-button ui-button-text ui-corner-all ui-state-default addToCartButton displayNone' data-bind='var: product(pid); format:addToCartButton; extension:store_product;' id='addToCartBtn' />
     <div class='clearfix alignRight'>
 			
-            <div class="needhelp" style="margin:40px 0 0 0;">
+            <div class="needhelp" style="margin:110px 0 0 0;">
 <br><br>
 Need help? Call Us!<br>
 <b>1-866-MY-SEALY</b><br>
@@ -1031,7 +1036,10 @@ ON ALL U.S. ORDERS<br>
 <a href="#">Learn more</a></div>
 		</div>
     </div>
-	</form><button id="reviewB" class='ui-button-text ui-button ui-state-default ui-corner-all' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).attr("data-pid"),"templateID":"reviewFrmTemplate"});' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'><img src="images/writeareview.gif" width="180" height="50"></button>
+	</form><button id="wishlist"  class='ui-button-text ui-button ui-state-default ui-corner-all'  onClick="app.ext.myRIA.a.add2BuyerList({pid:$(this).parent().attr('data-pid'),'listid':'wishlist'}); return false;"><img src="images/wishlist.gif" width="180" height="50">
+</button><button id="reviewB" class='ui-button-text ui-button ui-state-default ui-corner-all' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).attr("data-pid"),"templateID":"reviewFrmTemplate"});' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'><img src="images/writeareview.gif" width="180" height="50"></button>
+    
+    
     
 		
 	<!--<div class='floatRight'>
@@ -1829,8 +1837,8 @@ So the cart template should contain these two elements and the extension should 
 	
 		<h4 data-bind='var: product(prod_name); format:text; ' style='color:#128EC7;'></h4>
 		
-		<div class='ztable_row_small stid' data-bind='var: product(sku); format:text; className: stid; pretext: <b>Sku:</b> ;'></div>
-		
+		<div  style='display:none;'class='ztable_row_small stid' data-bind='var: product(sku);  format:text; className: stid; pretext: <b>Sku:</b> ;'></div>
+		<a href='#' onClick="app.ext.myRIA.a.add2BuyerList({pid:$(this).parent().attr('data-pid'),'listid':'wishlist'}); return false;">Add to Wishlist</a>
 		<div>
 		<b>qty:</b> <input type='number' class='qtyInput' onChange="app.ext.store_cart.u.updateCartQty($(this)); app.model.dispatchThis('immutable');"  data-bind='format:cartItemQty;extension:store_cart;useParentData:true;' size='3' />
 		<button class='displayNone'>update</button><!-- here to stop 'enter' in input above from closing modal -->
