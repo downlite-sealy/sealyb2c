@@ -2744,6 +2744,7 @@ else	{
 //executed in checkout when 'next/submit' button is pushed for 'existing account' after adding an email/password. (preflight panel)
 //handles inline validation
 			loginFrmSubmit : function(email,password)	{
+								
 				var errors = '';
 				var $errorDiv = $("#loginMessaging").empty(); //make sure error screen is empty. do not hide or callback errors won't show up.
 

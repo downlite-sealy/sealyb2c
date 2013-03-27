@@ -49,7 +49,7 @@ var myCreole;
 
 
 var app = {vars:{
-	"release":"20130325074725",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20130326070350",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"_clientid":"zmvc",
 	"baseURL":"",
 //	"httpsURL":"https://www-d38934b9ac-crackle-zoovy-net.app-hosted.com/s=www.d38934b9ac.crackle.zoovy.net/",
@@ -124,7 +124,13 @@ console.log(" -> domain: "+document.domain);
 
 <div id='appView' class='displayNone'>
 <div class="topbar">
-        <div class="welcome"><span class="fl">Welcome, Guest!(Not you? <a href="#customer?show=myaccount" class='bindByAnchor'>Sign-in</a> or <a href="#customer?show=newsletter" class='bindByAnchor'>Create An Account</a>)
+<input type="hidden" name="username" value="" id="username"/>
+        <div class="welcome"><span class="fl"><div id="usernameContainer">
+Welcome,
+<span class="loginShow username" onClick="return showContent('customer',{'show':'myaccount'});"></span>
+<span class="loginHide">Guest</span>
+!
+</div>(Not you? <a href="#customer?show=myaccount" class='bindByAnchor'>Sign-in</a> or <a href="#customer?show=newsletter" class='bindByAnchor'>Create An Account</a>)
         </span>
         <span class="fr"><a href="#cart?show=cart" class='bindByAnchor'><span class='cartItemCount'>0</span> item(s)</a> in <a href="#cart?show=cart" class='bindByAnchor'>Shopping Cart</a> | <a href="#checkout?show=checkout" class='bindByAnchor'>Checkout</a>
         <a href="#"><img src="images/que.gif" width="28" height="27" style="margin:-1px 0 -11px 51px;" alt=""></a></span></div>
@@ -237,7 +243,7 @@ console.log(" -> domain: "+document.domain);
     <div class="email"><input required='required' type='text'  value='full name' class='newsSubscribeInput textbox fullname' maxlength='50' size='25' name='fullname' id='subscribeFullnameFooter' onFocus="app.ext.myRIA.u.handleFormField(this);"  onBlur="app.ext.myRIA.u.handleFormField(this);" />
       <input type="image" class="submit" value="" src="images/signup.gif" alt="Sign Up" title="Sign Up" style="width:70px; height:30px;padding:0;"/>
       </form></div>
-    <div class="icons"><a href="http://www.facebook.com/DOWNLITE" target="_blank"><img src="images/fb.gif" width="32" height="32" alt="Facebook" title="Facebook"></a><a href="http://twitter.com/downlite" target="_blank"><img src="images/twitter.gif" width="32" height="32" alt="Twitter" title="Twitter"></a><a href="https://plus.google.com/b/114695199123775476410/" target="_blank"><img src="images/gplus.gif" width="32" height="32" alt="Google Plus" title="Google Plus"></a><a href="http://pinterest.com/downlite/" target="_blank"><img src="images/pinterest.gif" width="32" height="32" alt="Pinterest" title="Pinterest"></a><a href="#"><img src="images/youtube.gif" width="32" height="32" alt="You Tube" title="You Tube"></a></div>
+    <div class="icons"><a href="#."><img src="images/fb.gif" width="32" height="32" alt="Facebook" title="Facebook"></a><a href="#."><img src="images/twitter.gif" width="32" height="32" alt="Twitter" title="Twitter"></a><a href="#."><img src="images/gplus.gif" width="32" height="32" alt="Google Plus" title="Google Plus"></a><a href="#."><img src="images/pinterest.gif" width="32" height="32" alt="Pinterest" title="Pinterest"></a><a href="#"><img src="images/youtube.gif" width="32" height="32" alt="You Tube" title="You Tube"></a></div>
     <div class="cb"></div>
     </div>
 </section>
@@ -1022,7 +1028,7 @@ this will likely become more flexible in the future. ###
     <input type='submit' value='Add to Cart' class='ui-button ui-button-text ui-corner-all ui-state-default addToCartButton displayNone' data-bind='var: product(pid); format:addToCartButton; extension:store_product;' id='addToCartBtn' />
     <div class='clearfix alignRight'>
 			
-            <div class="needhelp" style="margin:110px 0 0 0;">
+            <div class="needhelp" style="margin:172px 0 0;">
 <br><br>
 Need help? Call Us!<br>
 <b>1-866-MY-SEALY</b><br>
@@ -1751,24 +1757,24 @@ So the cart template should contain these two elements and the extension should 
 
 	<td class='cartSummaryTotalsContainer'>
 	<div class='ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'>
-		<h2 class='ui-widget-header ui-helper-clearfix ui-corner-all ui-header'>Cart Totals</h2>
+		<h2 class='ui-widget-header ui-helper-clearfix ui-corner-all ui-header'><b>Cart Totals</b></h2>
 		<div class='cartSummaryContainer'>
 		
 <section id='cartTemplateCostSummary' class='cartSummary'>
 
-	<div data-bind="var: cart(sum/items_total); format:money; className:orderSubtotal; hideZero:false; currencySign: $; pretext:Subtotal: ; "></div>
+	<div data-bind="var: cart(sum/items_total); format:money; className:orderSubtotal; hideZero:false; currencySign: $; pretext:<b>Subtotal:</b> ; "></div>
 	
-	<div data-bind='var: cart(sum/tax_total); format:money; className:orderTax; hideZero:true;currencySign: $; pretext:Tax: ; '></div>
+	<div data-bind='var: cart(sum/tax_total); format:money; className:orderTax; hideZero:true;currencySign: $; pretext:<b>Tax:</b> ; '></div>
 
 	<div data-bind='var: cart(want/shipping_id); format:shipInfoById; className:orderShipping; hideZero:false; extension:store_cart;'></div>
 	
-	<div data-bind='var: cart(sum/order_total); format:money; className:orderTotal; hideZero:false; currencySign: $; pretext:Order Total: ; '></div>
+	<div data-bind='var: cart(sum/order_total); format:money; className:orderTotal; hideZero:false; currencySign: $; pretext:<b>Order Total:</b> ; '></div>
 	
-	<div data-bind='var: cart(sum/gfc_total); format:money; className:orderGiftcardTotal; hideZero:false; currencySign: $; pretext:Giftcard(s): ; '></div>
-	<div data-bind='var: cart(sum/pnt_total); format:money; className:rewardPointsTotal; hideZero:false; currencySign: $; pretext:Reward Points: ; '></div>
-	<div data-bind='var: cart(sum/rmc_total); format:money; className:returnsCreditTotal; hideZero:false; currencySign: $; pretext:Returns Credit: ; '></div>
+	<div data-bind='var: cart(sum/gfc_total); format:money; className:orderGiftcardTotal; hideZero:false; currencySign: $; pretext:<b>Giftcard(s):</b> ; '></div>
+	<div data-bind='var: cart(sum/pnt_total); format:money; className:rewardPointsTotal; hideZero:false; currencySign: $; pretext:<b>Reward Points:</b> ; '></div>
+	<div data-bind='var: cart(sum/rmc_total); format:money; className:returnsCreditTotal; hideZero:false; currencySign: $; pretext:<b>Returns Credit:</b> ; '></div>
 	
-	<div data-bind='var: cart(sum/balance_due_total); format:orderBalance; className:orderBalanceDue; hideZero:false; currencySign: $; pretext:Estimated Total: ; extension:store_cart;'></div>
+	<div data-bind='var: cart(sum/balance_due_total); format:orderBalance; className:orderBalanceDue; hideZero:false; currencySign: $; pretext:<b>Estimated Total:</b> ; extension:store_cart;'></div>
 
 </section>
 
@@ -1780,7 +1786,7 @@ So the cart template should contain these two elements and the extension should 
 <section class='stdMargin'>
 
 	<div class='cartZipCodeContainer'>
-	<label for='data-ship_zip'>Zip/Postal Code:</label>
+	<label for='data-ship_zip'><b>Zip/Postal Code:</b></label>
 	<input type='text' size='6'  name='ship/postal' id='data-ship_zip' value='' data-bind='var: cart(%ship/postal); format:popVal;' maxlength='10' onChange="app.calls.cartSet.init({'ship/postal':this.value});
 	app.ext.store_cart.u.updateCartSummary();
 	app.ext.store_cart.calls.cartShippingMethodsWithUpdate.init();
@@ -1835,7 +1841,7 @@ So the cart template should contain these two elements and the extension should 
 		
 		<div class='floatLeft'><img src='blank.gif' class='prodThumb' data-bind='var: product(zoovy:prod_image1); defaultVar: product(%attribs.zoovy:prod_image1); format:imageURL;' width='75' height='75' /></div>
 	
-		<h4 data-bind='var: product(prod_name); format:text; ' style='color:#128EC7;'></h4>
+		<h4 data-bind='var: product(prod_name); format:text; ' style='color:#128EC7; font-size:13px; font-weight:bold;'></h4>
 		
 		<div  style='display:none;'class='ztable_row_small stid' data-bind='var: product(sku);  format:text; className: stid; pretext: <b>Sku:</b> ;'></div>
 		<a href='#' onClick="app.ext.myRIA.a.add2BuyerList({pid:$(this).parent().attr('data-pid'),'listid':'wishlist'}); return false;">Add to Wishlist</a>
