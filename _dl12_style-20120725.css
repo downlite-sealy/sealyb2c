@@ -656,9 +656,7 @@ h1	{color:#000000; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:
 .ui-widget-content{ }
 .ui-corner-all li{ clear: both;
     float: left;
-    width: 100%;}
-#cartStuffList .prodThumb{ margin:0 12px 30px 0px;}
-.padMargBorderBottom .prompt{ font-weight:bold;}
+    width: 434px;}
 /*My CSS*/
 body{ background:url(images/bg.gif); margin:0px; padding:0px; font-family: 'Montserrat', sans-serif;font-size:13px; font-weight:normal;}
 a{ text-decoration:none; color:#128ec7;}
@@ -1564,10 +1562,9 @@ PRODUCT TEMPLATE
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f4',GradientType=0 ); /* IE6-8 */
 	}
 .qtyAndATCContainer fieldset {margin:0 0 3px;}
-.padMargBorderBottom .cents{ font-size:11px;}
 #wishlist{margin: 0 0 0 409px; position: absolute;top: 269px;}
 #Quantity select{ width:142px;padding:5px;border:#cccccc solid 1px;}
-#addToCartBtn	{ padding:0; position: absolute; top:209px; margin:0px; right:-5px; overflow:hidden; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:-1000px;cursor:pointer;}
+#addToCartBtn	{ padding:0; position: absolute; top:209px; margin:0 0 0 -88px; overflow:hidden; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:-1000px;cursor:pointer;}
 .prodViewerAddToCartForm select{ width:230px; padding:5px;border:#cccccc solid 1px;}
 .zform_number { width: 128px; padding:6px; margin-left:18px; border:#cccccc solid 1px;}
 .qtyInput	{font-size:10px; line-height:14px; border:#cccccc solid 1px;}
@@ -1588,9 +1585,7 @@ PRODUCT TEMPLATE
 .prodlistRelatedContainer h4	{background:url(images/youmayalsolike-990x57.jpg) no-repeat; width:990px; height:65px; margin:0; padding:0;}
 
 
-.cartSummaryTotalsContainer .cartSummaryContainer {
-    line-height: 25px;
-}
+
 .prodTabImage	{margin:0 12px 12px 0;} /* used for the photo in the global tabs */
 /* Updated all tabbedProductContentTable declarations to classes instead of IDs */
 .tabbedProductContentTable, #tabbedProductContentTable	{width:100%;}
@@ -1715,7 +1710,7 @@ CATEGORY TEMPLATE
 #preflightGuestInputs h2{ margin-bottom:20px;}
 #orderNotesContainer textarea{ width:350px;border:1px solid #CCCCCC;padding: 9px;}
 #giftcardCode{ border:1px solid #CCCCCC;height: 24px;padding: 0 9px;}
-#cartStuffList li{ min-height:auto; line-height:26px; margin:0 0 15px; padding:0 0 15px;  border-bottom:1px dotted #BDBDBD;}
+#cartStuffList li{ min-height:auto; line-height:26px; margin:0 0 15px; padding:0 0 15px;  border-bottom:1px dotted #EFEFEF;}
 .prodName{ width:350px;}
 .price{ font-weight:bold !important; font-size:18px !important;}
 .catDesc .categoryList li {height:auto; width:auto;} 
