@@ -249,6 +249,7 @@ _gaq.push(['_trackEvent','Authentication','User Event','Logged in through Facebo
 					return 1;
 					},
 				dispatch : function(obj,tagObj)	{
+					obj = {};
 					obj["_cmd"] = "buyerLogout";
 					obj["_tag"] = tagObj || {};
 					obj["_tag"]["datapointer"] = "buyerLogout";
@@ -1243,7 +1244,7 @@ AUTHENTICATION/USER
 			app.model.destroy('whoAmI'); //need this nuked too.
 			app.vars.cid = null; //used in soft-auth.
 			
-			app.calls.authentication.buyerLogout.init({'callback':'showMessaging','message':'Thank you, you are now logged out'});
+			app.calls.authentication.buyerLogout.init({'callback':'showMessaging','message':'Thank you, you are now logged out'},{'callback':'showMessaging','message':'Thank you, you are now logged out'});
 			app.calls.refreshCart.init({},'immutable');
 			app.model.dispatchThis('immutable');
 			},

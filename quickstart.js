@@ -522,6 +522,7 @@ else	{
 				$('#loginMessaging').empty().show().append("Thank you, you are now logged in."); //used for success and fail messaging.
 				$('#loginFormContainer').hide(); //contains actual form.
 				$('#recoverPasswordContainer').hide(); //contains password recovery form.
+				app.ext.myRIA.u.handleLoginActions();
 				}
 			} //authenticateBuyer
 
