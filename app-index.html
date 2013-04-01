@@ -148,7 +148,20 @@ Welcome,
 </div>
 </header>
 
-<section class="Logos"><div><img src="images/Slogo.gif" width="59" height="50" style="margin:25px 0 25px 160px;" alt="Sealy" title="Sealy"><img src="images/posture.gif" width="191" height="31" style="margin:35px 135px 35px 146px;" alt="Posturepedic" title="Posturepedic"><img src="images/stearns.gif" width="142" height="56" style="margin:22px 0;" alt="Stearns &amp; Foster" title="Stearns &amp; Foster"></div><div class="cb"></div></section>
+<section class="Logos">
+	<div>
+		<a href="#category?navcat=.brands.100-sealy-brand-bedding" class="bindByAnchor">
+			<img src="images/Slogo.gif" width="59" height="50" style="margin:25px 0 25px 160px;" alt="Sealy" title="Sealy" />
+		</a>
+		<a href="#category?navcat=.brands.200-sealy-posturepedic-brand-bedding" class="bindByAnchor">
+			<img src="images/posture.gif" width="191" height="31" style="margin:35px 135px 35px 146px;" alt="Posturepedic" title="Posturepedic" />
+		</a>
+		<a href="#category?navcat=.brands.400-stearns-and-foster-brand-bedding" class="bindByAnchor">
+			<img src="images/stearns.gif" width="142" height="56" style="margin:22px 0;" alt="Stearns &amp; Foster" title="Stearns &amp; Foster" />
+		</a>
+	</div>
+	<div class="cb"></div>
+</section>
 
 <nav class="nav_menu"><ul id='tier1categories'></ul><!-- DUAL NAV WILL GO HERE --></nav>
 <div class="cb"></div>
@@ -1368,7 +1381,7 @@ adding classes is not likely to have any bad effects.
 <!--  used in breadcrumb -->
 <ul>
 	<li id='breadcrumbTemplate'>
-	<a href='#' onClick="return showContent('category',{'navcat':$(this).parent().attr('data-catsafeid')});" data-bind='var: category(pretty); format:text;'></a>
+	<a href='#' onClick="return showContent('category',{'navcat':$(this).parent().attr('data-catsafeid')});" data-bind='var: category(pretty); format:catText; extension: myRIA;'></a>
 	</li>
 </ul>
 
