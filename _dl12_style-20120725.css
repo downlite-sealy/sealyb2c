@@ -650,8 +650,8 @@ a.highlight	{color:#d2590a;}
     cursor: pointer;
 	padding:0 10px 0 15px;
 }
-#prev img{ margin: 200px 0 0 6px;position: absolute;z-index: 99999;}
-#next img{ margin: 200px 0 0 590px;position: absolute;z-index: 99999;}
+#prev img{position: absolute;bottom:0px; left:0px;z-index: 99999;}
+#next img{position: absolute;bottom:0px; right:0px;z-index: 99999;}
 h1	{color:#000000; font-size:18px; font-weight:bold; margin:0 0 12px 0; padding:0;}
 .ui-widget-content{ }
 .ui-corner-all li{ clear: both;
@@ -1455,7 +1455,6 @@ footer:after {
 
 .bannerDuoContainer	{margin-bottom:29px;}
 .bannerDuoContainer .stacked	{width:300px;}
-.bannerDuoContainer .stacked img	{margin-bottom:2px; margin-left:2px;}
 /* banner slideshow */
 
 #slideshowContainer  {position:relative; z-index:10; height:301px; width:620px; overflow:hidden; } /* setting height/width and overflow hidden keeps banners from showing up, then hiding once slideshow() is executed */

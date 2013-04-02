@@ -56,7 +56,7 @@ app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {app.
 //group any third party files together (regardless of pass) to make troubleshooting easier.
 app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.js']);
 //for banner slideshow used on homepage.
-app.rq.push(['script',1,app.vars.baseURL+'cycle-2.9998.js']);//','validator':function(){return (jQuery().cycle) ? true : false;}});
+app.rq.push(['script',0,app.vars.baseURL+'cycle-2.9998.js']);//','validator':function(){return (jQuery().cycle) ? true : false;}});
 //renders AddThis block on product pages
 //app.rq.push(['script',5,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f26cd7d7f87f12', function(P) {var addthis_config = {"data_track_clickback":false,"ui_click":true,"ui_use_image_picker": true};}]);//	'validator':function(){return (typeof addthis == 'object') ? true : false;}
 
@@ -151,6 +151,11 @@ app.u.initMVC = function(attempts){
 	}
 
 
+    app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
+		var $target=$('#wideSlideshow');
+		$target.cycle({fx:'fade',speed:'slow',timeout:5000});	
+		//$target.cycle({fx:'swing',speed:3,timeout:5000,pager:'#slideshowNav',pagerAnchorBuilder:function(index,el){return' ';},slideExpr:'li'});
+		}]);
 
 //Any code that needs to be executed after the app init has occured can go here.
 //will pass in the page info object. (pageType, templateID, pid/navcat/show and more)
@@ -175,54 +180,7 @@ app.u.appInitComplete = function(P)	{
 			}
 		}
 			} //simpleSubcats
-// Homepage Slideshow
-//	app.ext.myRIA.template.homepageTemplate.onCompletes.push(function(){
-//		$('#wideSlideshow').cycle({
-//			fx:     'fade',
-//			speed:  'slow',
-//			timeout: 5000,
-//			pager:  '#slideshowNav',
-//			slideExpr: 'li'
-//			});
-//		}) //homepageTemplate.onCompletes
-			
-    app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-		var $target=$('#wideSlideshow');
-		$target.cycle({prev: '#prev',next: '#next',fx:'fade',speed:'slow',timeout:5000,pager:'#slideshowNav',text: true,pagerAnchorBuilder:function(index,el){return '';},slideExpr:'li'});	
-		//$target.cycle({fx:'swing',speed:3,timeout:5000,pager:'#slideshowNav',pagerAnchorBuilder:function(index,el){return' ';},slideExpr:'li'});
-		}]);
-		
-		
-// add link, css, etc to hotel finder.
-// FOR 201248 UPGRADE CLIENT ASKED THAT LINK GO TO HOTELS CAT PAGE NOT MODAL
-//	$('.hotelFinder').removeClass('disabled').addClass('pointer').click(function () {
-//		$('#hotelListContainer').dialog({
-//			'autoOpen':false,
-//			'width':'60%',
-//			'modal':'true',
-//			'height':'500'
-//			});
-//		$('#hotelListContainer').dialog('open');
-	//only render the menu the first time the modal is opened. saves cycles and eliminates duplicates appearing
-//		if($('#hotelListContainerUL > li').length < 1)	{
-//			app.renderFunctions.translateSelector('#hotelListContainer',app.data['appCategoryDetail|.hotels']);
-//			}
-//		});
-	//addthis code for productTemplate - replaced by partner_addthis extension
-//	app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
-//	var url = zGlobals.appSettings.http_app_url+"product/"+P.pid+"/";
-	//update the openGraph and meta content. mostly for social/addThis.
-//	$('#ogTitle').attr('content',app.data[P.datapointer]['%attribs']['zoovy:prod_name']);
-//	$('#ogImage').attr('content',app.u.makeImage({"name":app.data[P.datapointer]['%attribs']['zoovy:prod_image1'],"w":150,"h":150,"b":"FFFFFF","tag":0}));
-//	$('#ogDescription, #metaDescription').attr('content',app.data[P.datapointer]['%attribs']['zoovy:prod_desc']);
-//			addthis.toolbox('#socialLinks');
-//	if(typeof addthis == 'object' && addthis.update)	{
-//		addthis.update('share','url',url);
-//		$("#socialLinks .addthis_button_facebook_like").attr("fb:like:href",url);
-//		$("#socialLinks .addthis_button_pinterest_pinit").attr({"pi:pinit:media":app.u.makeImage({"h":"300","w":"300","b":"ffffff","name":app.data['appProductGet|'+P.pid]['%attribs']['zoovy:prod_image1'],"tag":0}),"pi:pinit:url":url});	
-//		}
 
-//		}]); //addThis productTemplate code		
 }
 
 
