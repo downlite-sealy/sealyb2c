@@ -766,7 +766,9 @@ nav a:hover{ color:#007dc0; text-decoration:none;}
 .email img{ margin:0 0 -10px -2px;}
 .email{ width:232px; float:left; padding:10px; margin:0 49px 0 10px;background:#f3f3f3;}
 .icons{ width:273px; float:left; padding:10px 0 0 0;}
-.icons img{ margin-right:21px;}
+.icons img{ margin-right:19px;}
+.icons a{ text-decoration:none;}
+.icons a:hover{ text-decoration:none;}
 .resultsMenuContainer {
     left: 3px;
     position: relative; float:right;
