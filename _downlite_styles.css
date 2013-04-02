@@ -4,3 +4,17 @@
 }
 
 .preflightInputContainer label {width: 100px;display:inline-block;}
+
+.catSideBar ul, .catSideBar li{
+	padding: 0px;
+	margin: 0px;
+	list-style:none;
+}
+
+.clear {
+	clear: both;
+}
+
+.catSideBar{
+	margin-left: 20px;
+}
