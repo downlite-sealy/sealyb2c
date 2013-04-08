@@ -684,7 +684,7 @@ header{width:940px;margin:0px auto; padding:0px;}
 .learnmore{ background:#c1dfec; width:129px; float:left; font-size:10px; padding:3px 0 4px 21px;}
 .learnmore b{ font-size:13px; color:#1891c8; font-weight:400;}
 @media screen and (-webkit-min-device-pixel-ratio:0) {.learnmore b {font-size:11px;}}
-.Logos{margin:61px 0 0 0;display: block;position: relative; }
+.Logos{margin:31px 0 0 0;display: block;position: relative; }
 .Logos:after {
     content: "";
     background:#fefefe; 
@@ -703,7 +703,7 @@ nav{ width:940px; margin:0px auto; padding:0px;}
 nav a{ font-size:18px; color:#000000; margin:0;}
 nav a:hover{ color:#007dc0; text-decoration:none;}
 
-.wrapper{ margin:0px auto; width:100%; padding:0px;display: block; padding:40px 0 0 0;position: relative;}
+.wrapper{ margin:0px auto; width:100%; padding:0px;display: block;position: relative;}
 .wrapper:after {
     content: "";
     background:#fefefe; 
@@ -947,7 +947,7 @@ footer:after {
 .nav_menu ul{
 	display: inline;
     float: left;
-    margin: 10px 0;
+    margin: 0px 0;
    /* margin:7px 0 10px 0\0/;
     *margin:6px 0 10px 0;*/
     padding: 0;
