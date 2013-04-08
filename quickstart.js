@@ -37,6 +37,7 @@ var myRIA = function() {
 			'productListTemplateResults',
 			'productTemplate',
 			'productTemplateQuickView',
+			//'helpfulTipsTemplate',
 			'pageNotFoundTemplate',
 //the list of templates that, in most cases, are left alone. Also in the same order as appTemplates
 			'breadcrumbTemplate',
@@ -1012,7 +1013,13 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 //						app.ext.myRIA.u.showPage('.'); //commented out.
 						app.ext.myRIA.u.showCart(infoObj);
 						break;
-
+						
+						
+					/*case 'helpfulTips':
+					infoObj.pageType = 'homepage';
+					infoObj.navcat = zGlobals.appSettings.rootcat;
+					infoObj.parentID = app.ext.myRIA.u.showPage(infoObj);
+					break;*/
 					case '404': 	//no specific code. shared w/ default, however a case is present because it is a recognized pageType.
 					default:		//uh oh. what are we? default to 404.
 						infoObj.pageType = '404';
@@ -1801,6 +1808,10 @@ if(ps.indexOf('?') >= 1)	{
 				case 'company':
 					relativePath = '#company?show='+infoObj.show;
 					break;
+					
+				/*case 'helpfulTips':
+					relativePath = '#tips?show=tips';
+					break;*/
 
 				default:
 					//uh oh. what are we?
