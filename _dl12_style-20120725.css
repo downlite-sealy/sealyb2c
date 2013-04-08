@@ -1565,7 +1565,8 @@ PRODUCT TEMPLATE
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f4',GradientType=0 ); /* IE6-8 */
 	}
 .qtyAndATCContainer fieldset {margin:0 0 3px;}
-.padMargBorderBottom .cents{ font-size:11px;}
+.padMargBorderBottom .cents{ font-size:11px; line-height:23px; vertical-align:top;}
+#cartTemplateCostSummary{font-size:13px;}
 #wishlist{margin: 0 0 0 409px; position: absolute;top: 269px;}
 #Quantity select{ width:142px;padding:5px;border:#cccccc solid 1px;}
 #addToCartBtn	{ padding:0; position: absolute; top:209px; margin:0px; right:-5px; overflow:hidden; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:-1000px;cursor:pointer;}
@@ -1682,7 +1683,7 @@ CATEGORY TEMPLATE
 }
 .pfrom{  display: inline-block;
     padding: 7px 0;}
-.cents{ vertical-align:super; font-size:12px;}
+.cents{ vertical-align:top; font-size:12px;}
 .categoryList li{width:220px;  padding:0px; color:#000; font-size:13px;}
 .categoryList .catName{
 	height: 34px;
