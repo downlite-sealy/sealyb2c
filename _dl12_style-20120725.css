@@ -1668,6 +1668,9 @@ CATEGORY TEMPLATE
     text-decoration: none;font-family:"Open Sans"; font-size:12px;
 }
 
+.catSideBar h3{
+}
+
 .categoryList li	{height:auto;}
 .productList li	{}
 .productList h5, .categoryList h5 {

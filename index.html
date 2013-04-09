@@ -615,9 +615,7 @@ don't modify the 'data-templateid' unless you are changing template names and up
 	<div class="catSideBar floatRight">
 		<h3>HELPFUL LINKS</h3>
 		<ul>
-			<li><a href="#">Selecting a Pillow</a></li>
-			<li><a href="#">Different Types of Sleep</a></li>
-			<li><a href="#">Positions</a></li>
+			<li><a href="#top" onClick="return showContent('company',{'show':'tip'});">Helpful Tips</a></li>
 			<li><a href="#company?show=faq" class='bindByAnchor'>Frequently Asked Questions</a></li>
 		</ul>
 
@@ -915,7 +913,9 @@ this will likely become more flexible in the future. ###
     <div class="LeftS">
     <h1 data-bind='var: product(zoovy:prod_name); format:text;'></h1>
     <h5 class='stid' data-bind='var: product(pid); format:text; pretext: Item #: ;'></h5>
-     <h5 data-bind='var: product(zoovy:prod_detail); format:text;'></h5>
+    <div id='prodDescTopContainer'>
+		<span id="prodDescTop" data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;' class='clearfix'></span>	</div>
+     
     <!--<h5 data-bind='var: product(zoovy:prod_mfg); format:searchLink; extension:myRIA; pretext: Manufacturer: ;'></h5>-->
     
 	
@@ -926,9 +926,8 @@ this will likely become more flexible in the future. ###
 			
 			<img class='floatLeft' src='images/free_shipping-147x38.png' width='147' height='38' alt='free shipping on orders over $150' />
 		</div>-->
-	
-    <div id='prodDescTopContainer'>
-		<span id="prodDescTop" data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;' class='clearfix'></span>	</div>
+	<h5 data-bind='var: product(zoovy:prod_detail); format:text;'></h5>
+    
     </div>
     
     <div class="rightS"><div class='priceContainer pricing marginTop marginBottom'>
@@ -1437,6 +1436,51 @@ For general product questions and order inquiries you can also email us at <a hr
 		<div id='faqArticle' class='displayNone textContentArea'>
 			<h1>Frequently Asked Questions</h1>
 			<div id='faqContent' class='loadingBG ui-accordion ui-widget ui-helper-reset ui-accordion-icons appAccordianesque'></div>
+		</div>
+        
+        <div id='tipArticle' class='displayNone textContentArea'>
+			<h4>Buying bedding online can be daunting because you can't touch the items. As the leading supplier of bedding to the best stores, hotels, resorts and cruise lines - we know how to keep you comfortable.</h4>
+            <br />
+            <h4>Many common questions are answered below - you can also visit our sleeping blog at NocJournal.com or call us for more advice.</h4>
+            <br /> <br />
+            <h3>Fill Power Information</h3>
+            <p>Often times the fill power of an item can be confused as a barometer for quality.
+            Fill power simply measures how fluffy the down is and makes the most sense when comparing comforters.
+            Most consumers love cloud lift soft bedding - and to get that experience a higher fill power is needed.
+            For Pillows a fill power of 550 - 600 is perfectly fine
+            For comforters a fill power of 600-800 is amazing (the higher the number the more cloud like you will feel</p>
+            <h3>Pillow Tips</h3>
+            <h4>Pillows are sold by density level - regardless of filling material. White Goose Down is considered the gold standard closely followed by PrimaLoft which is our Luxury Down Alternative</h4>
+            <p>If you sleep on your side (50% of us do) then choose a firmer density pillow.
+            If you sleep on your back (25% of us do) then choose a medium density pillow.
+            If you sleep face down or on your stomach (25% of us do) - then choose a soft density pillow.</p>
+            <h4>100% of DOWNLITE's pillows are made in the USA of Hypoallergenic materials.
+            Most pillows are machine washable & dryable (except silk and rayon).
+            Pillows can last 1-25 years based on the fillings, usage and care. Polyester pillows last 1-2 years usually versus down and feather pillows which can last 5-25 years.
+            Fluff Your pillows in the dryer on high heat once a month for 15 minutes to keep them fluffy, fresh and in good shape.</h4>
+            <br />
+            <h3>Comforter Tips</h3>
+            <p>We also suggest buying the biggest size you can to allow for less tug of war with the covers
+            Most comforters can be machine washed and dried in a commercial laundry mat
+            Try using a duvet to add color and protection to a comforter (duvet size should be within plus or minus two inches of the comforter dimensions).
+            Fills can shift in baffle box constructions - so look for PermaBaffle design comforters or sewn thru constructions.</p>
+            <h3>Feather Bed Tips</h3>
+            <p>90% of all our feather beds are made in the USA.
+            Feather beds are too large to wash - so spot care paired with a protector works best.
+            Adding a mattress pad on a featherbed is a great way to limit any feather poking and extend usage.
+            Fluff you feather bed daily or every other day for optimum softness.</p>
+            <h3>Sheeting, Duvets & Fine Linens</h3>
+            <p>We suggest Tencel Lyocell for fabrics which is really a miracle material with a soft to the touch hand, excellent moisture wicking and relatively easy care.
+            Tencel Lyocell comes from sustainably grown Eucalyptus trees and is processed in a very eco efficient manner.
+            Don't wash sheets, duvet covers or fine linens with towels.</p>
+            <h3>Fabrics & Thread Counts</h3>
+            <p>Most of us have been conditioned to assume higher thread counts means a better product - this is not always the case.
+            We prefer Supima Cotton when available for it's long staple fibers (this means a more durable and silky product).
+            Higher thread counts mean a more dense fabric - which means a stiffer fabric (generally we limit our fabrics to 500 TC or lower with most in the 300-400 range).
+            The weave and finishing of fabric can greatly impact it's hand (Which greatly impacts german fabrics which typically have the best hand but a relatively lower thread count due to amazing finishing).
+            DOWNLITE does not add FR (Flame Retardent) treatments to it's fabrics.
+            Wrinkle resistant fabric is usually chemically treated with an agent. DOWNLITE seldom uses these finishes for it's bedding (if an agent or finish was applied we would clearly mention it on the product information).
+            The finest cotton in the world is a German Batiste - very light weight and made with long staple cotton.</p>
 		</div>
 	
 
