@@ -270,7 +270,7 @@ Welcome,
 <div class="footerM">
 <div class="cust"><b>CUSTOMER SERVICE</b>
 <ul>
-<li><a href="#customer?show=ordertracking" class='bindByAnchor'>Order Tracking</a></li>
+<li><a href="#customer?show=orders" class='bindByAnchor'>Order Tracking</a></li>
 <li><a href="#company?show=shipping" class='bindByAnchor'>Shipping Info</a></li>
 <li><a href="#company?show=return" class='bindByAnchor'>Returns & Exchanges</a></li>
 <li><a href="#company?show=contact" class='bindByAnchor'>Contact Us</a></li>
@@ -285,7 +285,7 @@ Welcome,
 <li><a href="#category?navcat=.605-comforter-or-duvet-insert" class='bindByAnchor'>Comforter or Duvet</a></li>
 <li><a href="#category?navcat=.607-feathers-versus-down" class='bindByAnchor'>Feathers or Down</a></li>
 <li><a href="#category?navcat=.609-blanket-versus-comforter" class='bindByAnchor'>Blanket or Comforter</a></li>
-<li><a href="#category?navcat=.611-featherbed-versus-mattress-pad" class='bindByAnchor'>Feather Bed / Mattress</a></li>
+<li><a href="#category?navcat=.611-featherbed-versus-mattress-pad" class='bindByAnchor'>Feather Bed Vs. Pads</a></li>
 </ul>
 </div>
 <div class="res"><b>RESOURCES</b>
@@ -300,15 +300,14 @@ Welcome,
 <div class="links"><b>LINKS</b>
 <ul>
 <li><a href="http://downandfeathercouncil.com/" target='_blank'>Hypoallergenic Down</a></li>
-<li><a href="http://www.thefabricofourlives.com/" target='_blank'>Natural Cotton Bedding</a></li>
 <li><a href="#category?navcat=." target='_blank'>Sealy Bedding</a></li>
 <li><a href="#category?navcat=.617-downlite-partners" target='_blank'>Partner Links</a></li>
-<li><a href="#">Become a Retailer</a></li>
+<li><a href="#company?show=retailer" class='bindByAnchor'>Become a Retailer</a></li>
 </ul>
 </div>
 <div class="Ques"><b>QUESTIONS OR CONCERNS? CALL US!</b>
 <span>855-769-3696</span><br>
-Monday to Friday 10:00Am - 4:00pm EST<br>
+Monday - Friday 10:00AM - 4:00PM EST<br>
 <img src="images/mca.gif" width="62" height="22" style="margin:18px 0 21px;" alt=""> <br>
 Manufactured by DOWNLITE, a licensee of<br>
 Sealy Corporation, 8153 Duke Blvd, Mason Oh 45040.<br>
@@ -375,7 +374,7 @@ Sealy Corporation, 8153 Duke Blvd, Mason Oh 45040.<br>
 					<h4>LINKS</h4>
 					<ul>
 						<li><a href="http://downandfeathercouncil.com/" target='_blank'>Hypoallergenic Down</a></li>
-						<li><a href="http://www.thefabricofourlives.com/" target='_blank'>Natural Cotton Bedding</a></li>
+						
 						<li><a href="#category?navcat=." target='_blank'>DOWNLITE Bedding</a></li>
 						<li><a href="#category?navcat=.617-downlite-partners" target='_blank'>Partner Links</a></li>
 					</ul>
@@ -548,7 +547,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	Over the next couple months the Sealy bedding line will be expanded with a broad range of pillows, mattress pads, comforters, sheet sets and more. Our initial collection of items offers a 'best of' assortment of items, ready to provide you with comfort.
 </p>
 <p>
-	The entire assortment will include Sealy plus Sealy Posturepedic, Stearns and Foster and eventually the new Optimum line.
+	The entire assortment will include Sealy plus Sealy Posturepedic, Sealy Posturepedic Optimum and Stearns & Foster.
 </p>
 
 </div>
@@ -1348,17 +1347,17 @@ adding classes is not likely to have any bad effects.
     <div class="rightA1">
 <h3>HELPFUL LINKS</h3>
 <ul>
-<li><a href="#">Bedding Tips</a></li>
+<li><a onClick="return showContent('company',{'show':'tip'});" class="pointer">Bedding Tips</a></li>
 <li><a href="#company?show=faq" class='bindByAnchor'>Frequently Asked Questions</a></li>
 
 </ul>
 <h3>CUSTOMER SERVICE</h3>
 <ul>
-<li><a href="#company?show=contact" class='bindByAnchor'>Contact us</a></li>
-<li><a href="#company?show=shipping" class='bindByAnchor'>Shipping Policy</a></li>
-<li><a href='#company?show=return' id='navLink_return' class='bindByAnchor'>Return Policy</a></li>
-<li><a href="#company?show=payment" class='bindByAnchor'>Payment Policy</a></li>
-<li><a href="#company?show=privacy" class='bindByAnchor'>Privacy Policy</a></li>
+<li><a onClick="return showContent('company',{'show':'contact'});" class="pointer">Contact us</a></li>
+<li><a onClick="return showContent('company',{'show':'shipping'});" class="pointer">Shipping Policy</a></li>
+<li><a onClick="return showContent('company',{'show':'return'});" class="pointer" id='navLink_return'>Return Policy</a></li>
+<li><a onClick="return showContent('company',{'show':'payment'});" class="pointer">Payment Policy</a></li>
+<li><a onClick="return showContent('company',{'show':'privacy'});" class="pointer">Privacy Policy</a></li>
 </ul>
 <h3>MY ACCOUNT</h3>
 <ul>
@@ -1378,7 +1377,7 @@ or<br>
 
 <b>FREE SHIPPING</b><br>
 ON ALL U.S. ORDERS<br>
-<a href="#">Learn more</a>
+<a href='#top' onClick="return showContent('company',{'show':'shipping'});">Learn more</a>
 </div>
 </div>
 
@@ -1422,7 +1421,7 @@ ON ALL U.S. ORDERS<br>
 If you'd like to check the status of an order, (or cancel one that hasn't been processed), please <a href="#customer?show=myaccount">sign in</a> to your customer account.<br><br><br>
 
 <b>Phone</b><br>
-To place an order over the phone call <strong>+1 (123) 456-7890</strong> between 8:00 am to 5:00 pm PST.<br><br><br>
+To place an order over the phone call <strong>+1 (855)-769-3696</strong> between 10:00 am to 4:00 pm EST.<br><br><br>
 
 If you have a specific question about an existing product or order please email us at <a href="mailto:help@website.com" style="text-decoration:underline;">help@website.com</a>.<br><br><br>
 
@@ -1482,6 +1481,12 @@ For general product questions and order inquiries you can also email us at <a hr
             Wrinkle resistant fabric is usually chemically treated with an agent. DOWNLITE seldom uses these finishes for it's bedding (if an agent or finish was applied we would clearly mention it on the product information).
             The finest cotton in the world is a German Batiste - very light weight and made with long staple cotton.</p>
 		</div>
+        
+        
+        <div id='retailerArticle' class='displayNone textContentArea'>
+        	<h3>Thank you for your interest in becoming a Sealy Bedding Retailer. At this time we are currently working on our self service b to b website that you will be able to create an account with and to see items and place orders. In the meantime - please send an email to <span style="color:#08F">shunter@downlite.com</span> with your info and we would love to get in touch with furniture and mattress stores within the next couple weeks.</h3>
+            
+        </div>
 	
 
 	
