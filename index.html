@@ -955,9 +955,11 @@ ON ALL U.S. ORDERS<br>
 <a href="#">Learn more</a></div>
 		</div>
     </div>
-	</form><button id="wishlist"  class='ui-button-text ui-button ui-state-default ui-corner-all'  onClick="app.ext.myRIA.a.add2BuyerList({pid:$(this).parent().attr('data-pid'),'listid':'wishlist'}); return false;"><img src="images/wishlist.gif" width="180" height="50">
-</button><button id="reviewB" class='ui-button-text ui-button ui-state-default ui-corner-all' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).attr("data-pid"),"templateID":"reviewFrmTemplate"});' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'><img src="images/writeareview.gif" width="180" height="50"></button>
-    
+	</form>
+    <div data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
+        <button id="wishlist"  class='ui-button-text ui-button ui-state-default ui-corner-all wishListLink'  onClick="app.ext.myRIA.a.add2BuyerList({sku:$(this).parent().attr('data-pid'),'listid':'wishlist'}); return false;"><img src="images/wishlist.gif" width="180" height="50" /></button>
+        <button id="reviewB" class='ui-button-text ui-button ui-state-default ui-corner-all' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).attr("data-pid"),"templateID":"reviewFrmTemplate"});' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'><img src="images/writeareview.gif" width="180" height="50"></button>
+    </div>
     
     
 		
