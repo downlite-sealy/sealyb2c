@@ -5,7 +5,7 @@ app.rq = app.rq || []; //ensure array is defined. rq = resource queue.
 
 
 //app.rq.push(['extension',0,'convertSessionToOrder','extensions/checkout_passive/extension.js']);
-app.rq.push(['extension',0,'convertSessionToOrder','extensions/checkout_active/extension.js']);
+app.rq.push(['extension',0,'orderCreate','extensions/checkout/extension.js']);
 app.rq.push(['extension',0,'store_checkout','extensions/store_checkout.js']);
 app.rq.push(['extension',0,'store_prodlist','extensions/store_prodlist.js']);
 app.rq.push(['extension',0,'store_navcats','extensions/store_navcats.js']);
@@ -13,11 +13,11 @@ app.rq.push(['extension',0,'store_search','extensions/store_search.js']);
 app.rq.push(['extension',0,'store_product','extensions/store_product.js']);
 app.rq.push(['extension',0,'store_cart','extensions/store_cart.js']);
 app.rq.push(['extension',0,'store_crm','extensions/store_crm.js']);
-app.rq.push(['extension',0,'myRIA','quickstart.js','startMyProgram']);
+app.rq.push(['extension',0,'myRIA','app-quickstart.js','startMyProgram']);
 app.rq.push(['extension',0,'partner_addthis','extensions/partner_addthis.js','startExtension']); //MC's addthis ext from 201307
 
 app.rq.push(['extension',1,'google_analytics','extensions/partner_google_analytics.js','startExtension']); //old default callback.
-app.rq.push(['extension',1,'google_ts','extensions/partner_google_trusted_store.js','startExtension']); //new default callback.
+//app.rq.push(['extension',1,'google_ts','extensions/partner_google_trusted_store.js','startExtension']); //new default callback.
 app.rq.push(['extension',1,'google_adwords','extensions/partner_google_adwords.js','startExtension']);
 
 //app.rq.push(['extension',1,'bonding_buysafe','extensions/bonding_buysafe.js','startExtension']);
@@ -43,10 +43,10 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 app.rq.push(['script',0,(document.location.protocol == 'file:') ? app.vars.httpURL+'jquery/config.js' : app.vars.baseURL+'jquery/config.js']); //The config.js is dynamically generated.
 //app.rq.push(['script',0,app.vars.baseURL+'model.js']); //'validator':function(){return (typeof zoovyModel == 'function') ? true : false;}}
 app.rq.push(['script',0,app.vars.baseURL+'includes.js']); //','validator':function(){return (typeof handlePogs == 'function') ? true : false;}})
-app.rq.push(['script',1,app.vars.baseURL+'jeditable.js']); //used for making text editable (customer address). non-essential. loaded late.
 app.rq.push(['script',0,app.vars.baseURL+'controller.js']);
 
-app.rq.push(['script',0,app.vars.baseURL+'anyplugins.js']);
+app.rq.push(['script',0,app.vars.baseURL+'resources/jquery.ui.anyplugins.js']);
+app.rq.push(['script',1,app.vars.baseURL+'resources/jquery.ui.jeditable.js']);
 
 
 //sample of an onDeparts. executed any time a user leaves this page/template type.
