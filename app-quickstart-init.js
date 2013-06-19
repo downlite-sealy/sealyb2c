@@ -46,6 +46,7 @@ app.rq.push(['script',0,app.vars.baseURL+'controller.js']);
 
 app.rq.push(['script',0,app.vars.baseURL+'resources/jquery.ui.anyplugins.js']);
 app.rq.push(['script',1,app.vars.baseURL+'resources/jquery.ui.jeditable.js']);
+app.rq.push(['script',0,app.vars.baseURL+'resources/jquery.showloading-v1.0.jt.js']); //used pretty early in process..
 
 
 //sample of an onDeparts. executed any time a user leaves this page/template type.
