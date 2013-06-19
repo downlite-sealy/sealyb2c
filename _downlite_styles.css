@@ -18,3 +18,27 @@
 .catSideBar{
 	margin-left: 20px;
 }
+
+.blueBorder { border: 1px solid #1690C8; padding: 10px;}
+.prodViewerAddToCartForm  fieldset {margin: 5px;}
+.prodViewerAddToCartForm  input[name=qty] {padding: 5px;}
+
+.prodDetail { height: 0px; overflow:hidden; }
+
+
+.productButtons {
+	text-align: center;
+}
+
+.productButtons .prodButton {
+	margin: 4px auto;
+	width: 180px;
+}
+
+.productButtons .prodButton img{
+	margin: 0px;
+}
+
+.prodQty select {
+	width:130px;
+}

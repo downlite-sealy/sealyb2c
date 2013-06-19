@@ -15,6 +15,7 @@ app.rq.push(['extension',0,'store_cart','extensions/store_cart.js']);
 app.rq.push(['extension',0,'store_crm','extensions/store_crm.js']);
 app.rq.push(['extension',0,'myRIA','app-quickstart.js','startMyProgram']);
 app.rq.push(['extension',0,'partner_addthis','extensions/partner_addthis.js','startExtension']); //MC's addthis ext from 201307
+app.rq.push(['extension',0,'store_sealy','extensions/_sealyb2c.js']);
 
 app.rq.push(['extension',1,'google_analytics','extensions/partner_google_analytics.js','startExtension']); //old default callback.
 //app.rq.push(['extension',1,'google_ts','extensions/partner_google_trusted_store.js','startExtension']); //new default callback.
@@ -161,11 +162,7 @@ app.u.loadApp = function() {
 	myCreole = new Parse.Simple.Creole();
 	}
 
-    app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-		var $target=$('#wideSlideshow');
-		$target.cycle({fx:'fade',speed:'slow',timeout:5000});	
-		//$target.cycle({fx:'swing',speed:3,timeout:5000,pager:'#slideshowNav',pagerAnchorBuilder:function(index,el){return' ';},slideExpr:'li'});
-		}]);
+   
 
 //Any code that needs to be executed after the app init has occured can go here.
 //will pass in the page info object. (pageType, templateID, pid/navcat/show and more)

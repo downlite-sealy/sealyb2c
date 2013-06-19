@@ -63,7 +63,7 @@
 
 /* Interaction states
 ----------------------------------*/
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background:none;color: #1690C8; font-size: 15px;font-weight: bold; border:none; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { color: #1690C8; font-size: 15px;font-weight: bold; border:none; }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #615e59; text-decoration: none; }
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {background:none; font-weight:bold; color: #615e59; }
 .ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; }
@@ -1569,7 +1569,7 @@ PRODUCT TEMPLATE
 #cartTemplateCostSummary{font-size:13px;}
 #wishlist{margin: 0 0 0 409px; position: absolute;top: 269px;}
 #Quantity select{ width:142px;padding:5px;border:#cccccc solid 1px;}
-#addToCartBtn	{ padding:0; position: absolute; top:209px; margin:0px; right:-5px; overflow:hidden; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:-1000px;cursor:pointer;}
+#addToCartBtn	{ padding:0; margin:0px; overflow:hidden; border:0px; border-radius:0px; background: url(images/addtocart.gif) no-repeat 0px 0px; width:180px; height:50px; text-indent:-1000px;cursor:pointer;}
 .prodViewerAddToCartForm select{ width:230px; padding:5px;border:#cccccc solid 1px;}
 .zform_number { width: 128px; padding:6px; margin-left:18px; border:#cccccc solid 1px;}
 .qtyInput	{font-size:10px; line-height:14px; border:#cccccc solid 1px;}
