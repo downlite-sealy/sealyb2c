@@ -40,6 +40,8 @@ input:focus {
 	outline:none;
 	}
 
+input.numberInput	{width:50px}
+
 button:focus	{outline:none;}
 
 .zform_number	{width:50px;}
@@ -82,7 +84,7 @@ and offMenu is toggle off, hiding the change button.
 	filter: alpha(opacity=50);
 	opacity:0.5;
 	}
-
+.formValidationError, .zwarn	{color:#cc0000;} /* applied to errors displayed in form validation or generic warnings */
 .pointer	{cursor:pointer;}
 
 /* used when an element needs to start of hidden. this is used frequently. */
@@ -113,6 +115,20 @@ and offMenu is toggle off, hiding the change button.
 .marginTop	{margin-top:12px;}
 .marginBottom	{margin-bottom:12px;}
 .stdMargin	{margin:12px;}
+.headerPadding	{padding: 3px 6px;} /* for use in headings or legends that use the ui-state classes and need a little padding within. */
+.stdPadding	{padding:12px;}
+.fullWidth	{width:100%;}
+
+
+
+
+.buyerLoggedIn .hideIfLoggedIn	{display:none;}
+
+.hideIfLoggedOut	{display:none;}
+
+.buyerLoggedIn .hideIfLoggedOut	{display: block;} /* may be 'block' */
+.buyerLoggedIn span.hideIfLoggedOut, .buyerLoggedIn a.hideIfLoggedOut	{display: inline;} /* ensures inline on span elements */
+
 
 
 
@@ -121,14 +137,27 @@ and offMenu is toggle off, hiding the change button.
 
 
 /* messaging css. some error css is defined in the jqueryui styles */
-.appMessage	{margin-bottom:3px; text-align:left;}
-.appMessage .ui-icon	{float:left; margin:4px 5px;}
-.appMessage {padding:5px;} /* add padding to children, not parent, that way we can empty the parent and no space is reserved */
-.appMessage ul	{margin-left:12px; font-size:.9em;}
-.appMessage ul li	{margin:0; padding:0;}
 
-.ui-state-success, .ui-state-statusupdate	{border:1px solid #aecdae; background:#dff6df; color:#333333;}
-.ui-state-warning	{border:1px solid #f58d48; background:#ffdfc9; color:#333333;}
+.appMessage P	{padding:0; margin:0;} /* used in app messaging for warnings, alerts, successes, etc */
+.zMessage	{margin:6px; 0}
+
+.appMessage	{margin-bottom:12px; position:relative;}
+.appMessage .stdMargin {padding:5px;}
+.appMessage .ui-button	{position:absolute; top:-3px; right:-3px; z-index:100;}
+.appMessage .ui-icon	{float:left; margin-right:12px;}
+
+/* some messages have a red bg. add a white circle around the icon in these cases. */
+.ui-state-z-ise .ui-icon, .ui-state-z-error .ui-icon, .ui-state-z-debug .ui-icon	{
+	background-color:#ffffff;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	}
+
+/*.appMessage .ui-icon-alert	{background:url(images/error-82x82.png) no-repeat; height:82px; width:82px; margin:0 10px 10px 0;} */
+.appMessage .appMessageTxt	{float:left;}
+
+.ui-state-success, .ui-state-statusupdate	{border:1px solid #aecdae !important; background:#e3f6e3 !important; color:#333333 !important;}
+.ui-state-warning	{border:1px solid #f58d48 !important; background:#ffdfc9 !important; color:#333333 !important;}
 
 
 /* used in order history and faq (possibly other places) in a format similar to an accordian, but more than one panel can be open. */
@@ -147,7 +176,7 @@ and offMenu is toggle off, hiding the change button.
 
 /* app nav */
 
-#appNav {position:relative; height:1px; overflow:visible;}
+#appNav {position:relative; height:1px; overflow:visible; z-index:99;}
 #appNav .prodDetailPrevItemButton	{position:absolute; top:20px; left:-10px;}
 #appNav .prodDetailNextItemButton	{position:absolute; top:20px; right:-10px;}
 
@@ -201,6 +230,14 @@ and override using classes or id's as needed.
 
 
 
+/* for variations */
+
+.variation	{margin-bottom:6px;} /* class applied to div containing a variation group */
+.pogType_radio span label	{display:block; margin-bottom:4px; margin-left:12px;}
+
+
+
+
 /***************************************************
 
 PRODUCT DETAIL PAGE (productTemplate)
@@ -230,7 +267,7 @@ so the displayNone class is used, then a .grpType_PARENT class is added if the i
 
 .prodViewerAddToCartForm	{margin-bottom:24px;}
 .prodViewerAddToCartForm fieldset	{margin:0 0 12px 0; padding:0;}
-.prodViewerAddToCartForm label:after	{content:":"; padding-right:12px;}
+.variation > label:after	{content:":"; padding-right:12px;} /* applies to first label in a group. so no impact on radio labels */
 
 .CRMButtonMenu	{margin:0; padding:0; margin-bottom:12px;}
 
@@ -247,7 +284,7 @@ so the displayNone class is used, then a .grpType_PARENT class is added if the i
 .review_2	{background-position:0 -61px;}
 .review_3	{background-position:0 -91px;}
 .review_4	{background-position:0 -121px;}
-.review_4	{background-position:0 -151px;}
+.review_5	{background-position:0 -151px;}
 .review_6	{background-position:0 -181px;}
 .review_7	{background-position:0 -211px;}
 .review_8	{background-position:0 -241px;}
@@ -297,11 +334,9 @@ cartTemplate
 ***************************************************/
 
 
-
-
 .cartContainer	{width:100%;}
 
-
+#mainContentArea_cart .continueShoppingButton	{display:none;} /* used in modal cart only */
 
 /***************************************************
 
@@ -323,7 +358,7 @@ CUSTOMER PAGES
 #subscribeFormContainer .userInfo div	{margin-bottom:6px;}
 #subscribeFormContainer li	{list-style:none;}
 #subscribeFormContainer .userInfo label, #changePasswordForm label	{width:120px; display:inline-block; margin-right:10px;}
-.subscriberLists label	{width:300px;}
+.subscribeListItem	{display:block; height:30px;}
 
 
 /****** ORDER HISTORY AND INVOICE ******/
@@ -353,10 +388,10 @@ SEARCH RESULTS PAGE
 
 #mainContentArea_search	{position:relative;}
 
-.resultsHeader	{position:relative;}
+.resultsHeader	{position:relative; padding:3px 6px;}
 .resultsMenuContainer	{position:absolute; top:1px; left:3px;}
 .resultsMenuContainer .resultsMenu	{margin:3px 12px 0 0px;} /* used for sorting and pagination menus */
-.resultsMenuContainer ul.ui-menu ul	{z-index:10000;}
+.resultsMenuContainer ul.ui-menu ul	{z-index:10000; width:150px;}
 
 .resultsHeader .nextPageButton, .resultsHeader .prevPageButton	{float:right;}
 
@@ -401,7 +436,7 @@ HELP PAGES
 /***************************************************
 
 CART
-NOTE - Some of these classes are also shared with the cart summary that appears during checkout.
+
 
 ***************************************************/
 
@@ -424,20 +459,27 @@ NOTE - Some of these classes are also shared with the cart summary that appears 
 
 
 
+
 /***************************************************
 
 CHECKOUT
 
 ***************************************************/
 
+#paybySupplemental_CREDIT .ui-icon-help	{display:inline-block; margin-left:6px;}
 
 
+.paybySupplemental {padding:12px; font-weight:normal; border-top-width:0;}
+.paybySupplemental select {margin-right:12px;}
 
+.addressList address	{float:left; margin:0 12px 12px 0;}
 
+.creditCardCVVIcon	{display:inline-block !important;}
 
+.checkoutFormContainer input, checkoutFormContainer select	{margin:2px 6px 2px 0;}
+.checkoutFormContainer input[type='password']	{width:200px;} /* class affects both login password and create account passwords */
 
-
-
+.headerPadding label	{padding:2px 6px;}
 
 /* Pure CSS3 Multi Level Drop Down Navigation Menu */
 /*             http://www.bloggermint.com/demos/darknavmenu/#            */
@@ -458,7 +500,6 @@ CHECKOUT
 	margin:0;
 	padding:0;
 	list-style:none;
-	display:inline;
 	}
 
 /* tier 1 menu link style (ok to change this). will affect tier2 also */
@@ -471,12 +512,11 @@ CHECKOUT
 
 
 .ddUlMenu li ul {
-	/*left: -999em;*/
-	/*margin: 14px 0px 0 -20px; /* top margin should = tier 1 line-height - 1px...ish */
-	/*position: absolute;
+	left: -999em;
+	margin: 14px 0px 0 -20px; /* top margin should = tier 1 line-height - 1px...ish */
+	position: absolute;
 	width: 160px;
-	z-index: 9999;*/
-	border:none;
+	z-index: 9999;
 	}
 
 .ddUlMenu li:hover ul {
@@ -484,7 +524,7 @@ CHECKOUT
 	}
 
 /* tier 2 nav */
-.ddUlMenu li ul li	{cursor:pointer; color:#000099;} /* click is likely binded to li, so make it all a cursor */
+.ddUlMenu li ul li	{cursor:pointer;} /* click is likely binded to li, so make it all a cursor */
 .ddUlMenu li ul a {
 	background: none;
 	line-height:24px;
@@ -492,7 +532,6 @@ CHECKOUT
 	display:block;
 	border: 0 none;
 	width: 160px;
-	
 	}
 
 

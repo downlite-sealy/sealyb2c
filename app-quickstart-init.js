@@ -3,10 +3,10 @@ app.rq = app.rq || []; //ensure array is defined. rq = resource queue.
 
 
 
-
-//app.rq.push(['extension',0,'convertSessionToOrder','extensions/checkout_passive/extension.js']);
 app.rq.push(['extension',0,'orderCreate','extensions/checkout/extension.js']);
-app.rq.push(['extension',0,'store_checkout','extensions/store_checkout.js']);
+app.rq.push(['extension',0,'cco','extensions/cart_checkout_order.js']);
+
+
 app.rq.push(['extension',0,'store_prodlist','extensions/store_prodlist.js']);
 app.rq.push(['extension',0,'store_navcats','extensions/store_navcats.js']);
 app.rq.push(['extension',0,'store_search','extensions/store_search.js']);
@@ -27,10 +27,9 @@ app.rq.push(['extension',1,'google_adwords','extensions/partner_google_adwords.j
 
 //add tabs to product data.
 //tabs are handled this way because jquery UI tabs REALLY wants an id and this ensures unique id's between product
-//updated from 201304 per JT
 app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
-	var safePID = app.u.makeSafeHTMLId(P.pid); //can't use jqSelector because productTEmplate_pid still used makesafe. planned Q1-2013 update ###
-	var $tabContainer = $( ".tabbedProductContent",$('#productTemplate_'+safePID));
+	var $context = $(app.u.jqSelector('#',P.parentID));
+	var $tabContainer = $( ".tabbedProductContent",$context);
 		if($tabContainer.length)	{
 			if($tabContainer.data("widget") == 'anytabs'){} //tabs have already been instantiated. no need to be redundant.
 			else	{
@@ -115,30 +114,31 @@ app.u.howManyPassZeroResourcesAreLoaded = function(debug)	{
 
 app.u.initMVC = function(attempts){
 //	app.u.dump("app.u.initMVC activated ["+attempts+"]");
-	var includesAreDone = true;
+	var includesAreDone = true,
+	percentPerInclude = (100 / app.vars.rq.length),   //what percentage of completion a single include represents (if 10 includes, each is 10%).
+	resourcesLoaded = app.u.howManyPassZeroResourcesAreLoaded(),
+	percentComplete = Math.round(resourcesLoaded * percentPerInclude); //used to sum how many includes have successfully loaded.
 
-//what percentage of completion a single include represents (if 10 includes, each is 10%).
-	var percentPerInclude = (100 / app.vars.rq.length);  
-	var resourcesLoaded = app.u.howManyPassZeroResourcesAreLoaded();
-	var percentComplete = Math.round(resourcesLoaded * percentPerInclude); //used to sum how many includes have successfully loaded.
-	//make sure precentage is never over 100
+//make sure precentage is never over 100
 	if(percentComplete > 100 )	{
 		percentComplete = 100;
 		}
-	
-	$('#appPreViewProgressBar').val(percentComplete);
-	$('#appPreViewProgressText').empty().append(percentComplete+"% Complete");
+
+	$('#appPreViewProgressBar','#appPreView').val(percentComplete);
+	$('#appPreViewProgressText','#appPreView').empty().append(percentComplete+"% Complete");
 
 	if(resourcesLoaded == app.vars.rq.length)	{
-//instantiate controller. handles all logic and communication between model and view.
-//passing in app will extend app so all previously declared functions will exist in addition to all the built in functions.
-//tmp is a throw away variable. app is what should be used as is referenced within the mvc.
-		app.vars.rq = null; //to get here, all these resources have been loaded. nuke record to keep DOM clean and avoid any duplication.
-		var tmp = new zController(app);
-//instantiate wiki parser.
-		myCreole = new Parse.Simple.Creole();
+		var clickToLoad = false;
+		if(clickToLoad){
+			$('#loader').fadeOut(1000);
+			$('#clickToLoad').delay(1000).fadeIn(1000).click(function() {
+				app.u.loadApp();
+			});
+		} else {
+			app.u.loadApp();
+			}
 		}
-	else if(attempts > 100)	{
+	else if(attempts > 50)	{
 		app.u.dump("WARNING! something went wrong in init.js");
 		//this is 10 seconds of trying. something isn't going well.
 		$('#appPreView').empty().append("<h2>Uh Oh. Something seems to have gone wrong. </h2><p>Several attempts were made to load the store but some necessary files were not found or could not load. We apologize for the inconvenience. Please try 'refresh' and see if that helps.<br><b>If the error persists, please contact the site administrator</b><br> - dev: see console.</p>");
@@ -150,6 +150,15 @@ app.u.initMVC = function(attempts){
 
 	}
 
+app.u.loadApp = function() {
+//instantiate controller. handles all logic and communication between model and view.
+//passing in app will extend app so all previously declared functions will exist in addition to all the built in functions.
+//tmp is a throw away variable. app is what should be used as is referenced within the mvc.
+	app.vars.rq = null; //to get here, all these resources have been loaded. nuke record to keep DOM clean and avoid any duplication.
+	var tmp = new zController(app);
+//instantiate wiki parser.
+	myCreole = new Parse.Simple.Creole();
+	}
 
     app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 		var $target=$('#wideSlideshow');
