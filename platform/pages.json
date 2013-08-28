@@ -1,18 +1,45 @@
 {
-   ".100-sealy-pillows" : {},
-   ".200-sealy-pads-and-toppers" : {},
-   ".400-sealy-sheet-sets" : {},
-   ".brands.400-stearns-and-foster-brand-bedding" : {},
+   ".100-sealy-pillows" : {
+      "fl" : "~downlite_c_dataentry",
+      "picture1" : "4/480x360_down_and_down_alternative_pillows.jpg",
+      "description" : "Don't settle for a pillow past its prime. Sealy knows about perfectly comforting pillows and offers them in multiple styles and options. Whether you seek an extra soft down pillow or PrimaLoft, the luxury down alternative option - we have you covered. Hypoallergenic, easy care and made in the USA - who can ask for more.\n\n\nWith so many pillow options it can be a bit confusing which to pick. Don't take the chance of guessing on a pillow for your comfort - call or email us for help."
+   },
+   ".200-sealy-pads-and-toppers" : {
+      "youtube_videoid" : "",
+      "youtube_videoheader" : "",
+      "fl" : "~downlite_c_dataentry",
+      "picture1" : "4/480x360_sealy_mattress_toppers2.jpg",
+      "description" : "There is nothing as dreamy as sinking into a soft billowy bed at night and the key is to use a good bed topper. There are basically two types of options - feather beds which provide 3-5 inches of filling comfort or mattress pads & toppers which add a smaller degree of softness.\n\n\nYou can use a feather bed and a mattress pad at the same time for the ultimate in soft goodness. Many of our customers use bed toppers to help soften a hard memory foam mattress.\n\n\nThe Sealy collection has pads and toppers with waterproof options to help protect your investments as well.\n\n\nWhether you seek protection of your mattress or want to dramatically add softness we have options for you.",
+      "youtube_videodescription" : ""
+   },
+   ".400-sealy-sheet-sets" : {
+      "fl" : "~downlite_c_dataentry",
+      "picture1" : "4/480x360_sealybedding_sheets_iamge.jpg",
+      "description" : "Our collection of sheeting ranges from 300 to 500 thread count sets. Also available for purchase are bonus pillowcase sets to coordinate with the 300 thread count collection.\n\nAll of the Sealy and Stearns & Foster sheet set options include our TrueStay&#174 tight fitting fitted sheet corners to grip and hold the end of the bed for less movement. Our sheet set options also include NeatCase&#174 pillowcases - which hide the end of the pillows for a neater appearance.\n\nThe 300 thread count collection includes colors including classic white, vanilla, tan and grey. The 300 TC collection includes a fitted, flat and pillowcase(s).  In addition, bonus pillowcase sets are available for sale.\n\nThe 500 thread count collection includes colors including classic white, vanilla, tan and blue. The 500 TC collection includes a fitted, flat and pillowcase(s).  \n\nWith so many sheet options it can be a bit confusing which to pick. Don't take the chance of guessing on the right sheets for your comfort - call or email us for help.\n"
+   },
+   ".brands.400-stearns-and-foster-brand-bedding" : {
+      "youtube_videoid" : "",
+      "youtube_videoheader" : "",
+      "fl" : "~downlite_c_dataentry",
+      "picture1" : "4/480x360_stearns_and_foster_bedding.jpg",
+      "description" : "Sealy is one of the oldest bedding brands in the world with a strong heritage for American made products.\n\n\nThe Stearns & Foster product line represents a broad range of luxury bedding , worthy of only the finest master suites.  Stearns & Foster bedding products include a full range of pillows, mattress pads and toppers, comforters, sheet sets and more.\n\n\nTo learn more simply browse the items below or if you want to shop not only Stearns & Foster but also Sealy and Sealy Posturepedic - simply shop with the various categories above.\n\n\nDue to the range of options don't feel overwhelmed, please contact a bedding specialist, Monday To Friday from 10 AM to 4 PM EST.",
+      "youtube_videodescription" : ""
+   },
    ".600-silk-down-bedding-buying-guide" : {
       "meta_keywords" : "silk down pillow,silk down comforter,silk down bedding",
       "banner1" : "8/800x300_landing_page_silk_down_bedding_buying_guide.jpg",
       "fl" : "c-20090113",
-      "picture1" : "4/400x400_silk_down_bedding_buying_guide",
       "description2" : "Silk down bedding is a great option for the ultimate in luxury.",
-      "prodlist_custom" : "&SORTBY=NONE&FORMAT=CUSTOM&SRC=&ALTERNATE=0&SIZE=&SHOWSKU=&",
       "description" : "== Silk Down Bedding Buying Guide ==\n\n\nIf you want the ultimate in bedding luxury then down filled silk bedding is a great option. Silk down bedding is generally higher maintenance and requires dry cleaning for the silk. Most silk bedding products are not made with machine washable grade silk fabric. Due to the fine nature of silk yarn most silk down bedding comes in higher thread count ranges from 400 and up. Most silk bed pillows feature a removable silk protector. To wash the pillow you would remove the outer protector. You could then machine wash your pillow and send the protector to a dry cleaner. This is a much cheaper option than sending the whole pillow to the dry cleaner (which can run about $20 to $30 for a cleaning)."
    },
-   ".brands.200-sealy-posturepedic-brand-bedding" : {},
+   ".brands.200-sealy-posturepedic-brand-bedding" : {
+      "youtube_videoid" : "",
+      "youtube_videoheader" : "",
+      "fl" : "~downlite_c_dataentry",
+      "picture1" : "4/480x360_sealy_posturepedic_bedding.jpg",
+      "description" : "Sealy is one of the oldest bedding brands in the world with a strong heritage for American made products.\n\n\nThe Sealy Posturepedic product line represents a broad range of luxurious bedding offering targeted relief to fit your comfort needs.  Sealy Posturepedic bedding products include a full range of pillows, mattress pads and toppers, comforters, sheet sets and more.\n\n\nTo learn more simply browse the items below or if you want to shop not only Sealy Posturepedic but also Sealy and Stearns & Foster - simply shop with the various categories above.\n\n\nDue to the range of options don't feel overwhelmed, please contact a bedding specialist, Monday To Friday from 10 AM to 4 PM EST.",
+      "youtube_videodescription" : ""
+   },
    ".603-down-alternative" : {
       "banner1" : "8/800x300_landing_page_down_alternatives_from_downlite.jpg",
       "fl" : "c-20090113",
@@ -38,6 +65,20 @@
       "fl" : "c-20090113",
       "description" : "== Blanket Versus Comforters - How To Choose ==\n\n\nDOWNLITE primarily makes filled bedding so on our site we have two top of bed options: comforters and blankets.\n\n\nA comforter is usually filled with down or down alternative and has stitched boxes ranging in size from 10 inches to 16 inches. The larger the box size the higher the fill power or more filling is needed to keep the square fluffy. Comforters are generally best suited for fall/winter usage as they tend to be better in heat retention when compared to a blanket.\n\n\nA blanket is usually filled with down or down alternative and features smaller stitched boxes ranging in size from 4 to 6 inches. Blankets are typically larger than comforters as they are meant to be tucked under the mattress for a hotel look. Blankets frequently have a decorative element such as satin binding or a self flange. Blankets are a great summer weight bedding option. They can be paired with a comforter in winter for extra warmth. Most blankets are machine washable. "
    },
-   ".300-sealy-comforters" : {},
-   ".brands.100-sealy-brand-bedding" : {}
+   ".300-sealy-comforters" : {
+      "youtube_videoid" : "",
+      "youtube_videoheader" : "",
+      "fl" : "~downlite_c_dataentry",
+      "picture1" : "4/480x360_down_and_down_alternative_comforters.jpg",
+      "description" : "There are many options for comforter choices ranging from entry level light weight models to choices that feature extra filling and upgraded fabrics.\n\nWith so many comforter options it can be a bit confusing which to pick. Don't take the chance of guessing on a comforter for your comfort - call or email us for help.\n",
+      "youtube_videodescription" : ""
+   },
+   ".brands.100-sealy-brand-bedding" : {
+      "youtube_videoid" : "",
+      "youtube_videoheader" : "",
+      "fl" : "~downlite_c_dataentry",
+      "picture1" : "4/480x360_sealy_bedding_brand.jpg",
+      "description" : "Sealy is one of the oldest bedding brands in the world with a strong heritage for American made products.\n\n\nThe Sealy product line represents a broad range of premium bedding offering soft cotton fabrics paired with comforting fillings.  Sealy bedding products include a full range of pillows, mattress pads and toppers, comforters, sheet sets and more.\n\n\nTo learn more simply browse the items below or if you want to shop not only Sealy but also Sealy Posturepedic and Stearns & Foster - simply shop with the various categories above.\n\n\nDue to the range of options don't feel overwhelmed, please contact a bedding specialist, Monday To Friday from 10 AM to 4 PM EST.",
+      "youtube_videodescription" : ""
+   }
 }
