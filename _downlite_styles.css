@@ -42,3 +42,11 @@
 .prodQty select {
 	width:130px;
 }
+
+.Logos img {
+	margin: 0px 55px;
+}
+
+.Logos img.bumpDown {
+	margin-top: 12px;
+}
