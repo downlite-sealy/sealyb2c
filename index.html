@@ -50,7 +50,7 @@ var app = {vars:{
 	"_clientid":"zmvc",
 	"baseURL":"", //used in non-local mode.
 	"checkoutAuthMode" : "active",//can be passive, active or required
-	"testURL":"http://www.2e40ac9b.crackle.zoovy.net/" //used ONLY if protocol is file: (for testing)
+	"testURL":"http://www.sealybedding.com/" //used ONLY if protocol is file: (for testing)
 	},u:{},rq:[]};
 
 //set base url so images, css, js, etc all load from appropriate location once deployed.
@@ -524,21 +524,30 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 <div id='homepageTemplate' class='homeTemplate'>
 	<div class="bannerDuoContainer clearfix">
 		<div class="floatRight stacked">
-			<a>
-				<img src="images/300x141_american_made_pillows.jpg" width="300" height="141" alt="">
+			<a href="#" onClick="return showContent('category',{'navcat':'.400-sealy-sheet-sets'});">
+				<img src="images/300x141_sealybedding_homepage_sealy_sheet_sets_small_banner_top_right.jpg" width="300" height="141" alt="">
 			</a>
-			<a>
-				<img src="images/300x141_new_collections_coming_in_june.jpg" width="300" height="141" style="margin-top:19px;" alt="">
+			<a href="#" onClick="return showContent('category',{'navcat':'.brands.300-sealy-optimum-brand-bedding'});">
+				<img src="images/300x141_sealybedding_homepage_optimum_bedding_small_banner_bottom_right.jpg" width="300" height="141" style="margin-top:19px;" alt="">
 			</a>
 		</div>
 		<div class="floatLeft">
 			<div id="slideshowContainer">
 				<ul style="position: relative;" id="wideSlideshow" class="pics slideshow">
 					<li>
-						<img src="images/620x301_sealy_supports_it_2.jpg" width="620" height="301" />
+						<a href="#" onClick="return showContent('product',{'pid':'DOW555PG0010'});">
+							<img src="images/620x301_sealybedding_homepage_firm_density_pillows.jpg" width="620" height="301" />
+						</a>
 					</li>
 					<li>
-						<img src="images/620x301_sealy_supports_it_3.jpg" width="620" height="301" />
+						<a href="#" onClick="return showContent('category',{'navcat':'.500-protectors'});">
+							<img src="images/620X301_sealybedding_homepage_waterproof_protectors.jpg" width="620" height="301" />
+						</a>
+					</li>
+					<li>
+						<a href="#" onClick="return showContent('category',{'navcat':'.brands.300-sealy-optimum-brand-bedding'});">
+							<img src="images/620x301_sealybedding_homepage_optimum_pillows.jpg" width="620" height="301" />
+						</a>
 					</li>
 				</ul>
 			</div>
